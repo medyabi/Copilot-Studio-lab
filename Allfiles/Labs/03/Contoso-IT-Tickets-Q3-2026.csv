@@ -1,0 +1,241 @@
+TicketID,OpenedDate,Site,Category,Priority,ResolutionHours,WithinSLA,SatisfactionScore
+INC-20001,2026-08-05,Casablanca,Network,Low,36.3,Yes,2
+INC-20002,2026-07-12,Paris,Network,Low,44.9,No,3
+INC-20003,2026-07-26,Dubai,Software,Low,30.7,Yes,3
+INC-20004,2026-07-01,Paris,Software,Normal,6.3,Yes,5
+INC-20005,2026-08-13,Madrid,Software,Low,48.7,No,4
+INC-20006,2026-08-28,Lisbon,Network,High,10.1,No,2
+INC-20007,2026-09-09,Madrid,Security,High,6.6,Yes,3
+INC-20008,2026-07-30,Madrid,Account & Access,Low,58.0,No,2
+INC-20009,2026-08-18,Madrid,Account & Access,High,7.1,Yes,3
+INC-20010,2026-08-04,Casablanca,Software,Low,58.7,No,3
+INC-20011,2026-08-29,Lisbon,Software,Low,0.5,Yes,3
+INC-20012,2026-07-08,Paris,Network,High,15.5,No,2
+INC-20013,2026-07-09,Madrid,Account & Access,Normal,25.2,No,3
+INC-20014,2026-09-21,Dubai,Network,Normal,40.9,No,3
+INC-20015,2026-09-10,Dubai,Software,Low,9.9,Yes,5
+INC-20016,2026-07-18,Lisbon,Software,Critical,2.5,Yes,5
+INC-20017,2026-07-15,Dubai,Hardware,Low,41.5,No,2
+INC-20018,2026-08-29,Lisbon,Software,Normal,24.4,No,4
+INC-20019,2026-07-02,Lisbon,Security,Critical,2.7,Yes,4
+INC-20020,2026-08-07,Dubai,Account & Access,Normal,16.0,Yes,3
+INC-20021,2026-08-03,Lisbon,Software,Critical,5.3,No,2
+INC-20022,2026-09-20,Lisbon,Account & Access,Normal,17.3,Yes,3
+INC-20023,2026-09-08,Casablanca,Hardware,High,15.8,No,4
+INC-20024,2026-08-16,Madrid,Software,Low,25.4,Yes,3
+INC-20025,2026-07-11,Casablanca,Hardware,High,11.6,No,3
+INC-20026,2026-09-09,Paris,Hardware,Normal,25.3,No,4
+INC-20027,2026-07-28,Paris,Software,Normal,33.6,No,4
+INC-20028,2026-08-17,Dubai,Software,Normal,13.5,Yes,5
+INC-20029,2026-08-13,Lisbon,Hardware,Low,56.4,No,3
+INC-20030,2026-07-08,Paris,Hardware,Normal,21.5,Yes,2
+INC-20031,2026-07-10,Dubai,Account & Access,High,5.1,Yes,3
+INC-20032,2026-09-12,Lisbon,Software,Normal,19.4,Yes,5
+INC-20033,2026-08-22,Dubai,Software,Normal,21.5,Yes,4
+INC-20034,2026-07-07,Casablanca,Software,Normal,23.8,Yes,2
+INC-20035,2026-07-14,Dubai,Software,Normal,20.0,Yes,3
+INC-20036,2026-08-01,Casablanca,Software,Normal,25.8,No,5
+INC-20037,2026-07-13,Casablanca,Account & Access,High,21.0,No,2
+INC-20038,2026-07-22,Dubai,Security,Critical,4.6,No,5
+INC-20039,2026-07-08,Dubai,Software,High,8.1,No,4
+INC-20040,2026-08-06,Dubai,Security,Critical,3.1,Yes,5
+INC-20041,2026-07-08,Madrid,Hardware,Normal,10.1,Yes,2
+INC-20042,2026-09-06,Paris,Hardware,Normal,14.6,Yes,2
+INC-20043,2026-07-24,Paris,Security,Normal,23.1,Yes,5
+INC-20044,2026-08-01,Lisbon,Hardware,High,8.6,No,2
+INC-20045,2026-09-13,Madrid,Network,Normal,12.8,Yes,3
+INC-20046,2026-08-03,Dubai,Network,Normal,16.9,Yes,3
+INC-20047,2026-08-10,Casablanca,Network,Normal,39.0,No,5
+INC-20048,2026-07-13,Casablanca,Network,Normal,10.9,Yes,3
+INC-20049,2026-08-14,Madrid,Software,Low,60.4,No,4
+INC-20050,2026-09-29,Madrid,Hardware,High,3.0,Yes,2
+INC-20051,2026-09-23,Madrid,Network,Normal,34.7,No,2
+INC-20052,2026-07-20,Madrid,Account & Access,Normal,31.2,No,4
+INC-20053,2026-07-27,Lisbon,Network,Normal,13.3,Yes,5
+INC-20054,2026-07-07,Casablanca,Software,High,1.5,Yes,5
+INC-20055,2026-08-12,Madrid,Account & Access,Low,39.1,Yes,3
+INC-20056,2026-08-24,Lisbon,Account & Access,Normal,7.3,Yes,2
+INC-20057,2026-09-27,Madrid,Hardware,High,11.7,No,3
+INC-20058,2026-08-16,Casablanca,Software,Low,24.5,Yes,4
+INC-20059,2026-07-14,Dubai,Hardware,Low,23.4,Yes,3
+INC-20060,2026-07-21,Paris,Security,Normal,29.2,No,5
+INC-20061,2026-08-12,Paris,Hardware,Normal,21.9,Yes,4
+INC-20062,2026-08-18,Casablanca,Hardware,Normal,10.9,Yes,5
+INC-20063,2026-08-28,Paris,Hardware,High,4.1,Yes,3
+INC-20064,2026-08-12,Madrid,Hardware,Low,60.3,No,2
+INC-20065,2026-09-21,Lisbon,Security,Normal,6.4,Yes,4
+INC-20066,2026-08-03,Paris,Security,Normal,19.2,Yes,4
+INC-20067,2026-08-14,Lisbon,Hardware,Normal,19.0,Yes,2
+INC-20068,2026-08-02,Casablanca,Software,Normal,12.3,Yes,5
+INC-20069,2026-09-07,Paris,Hardware,High,4.7,Yes,4
+INC-20070,2026-08-12,Lisbon,Software,High,0.5,Yes,4
+INC-20071,2026-08-08,Madrid,Network,Low,12.0,Yes,5
+INC-20072,2026-07-25,Dubai,Network,Normal,19.4,Yes,5
+INC-20073,2026-09-17,Casablanca,Network,High,4.7,Yes,4
+INC-20074,2026-09-13,Lisbon,Software,Normal,16.1,Yes,4
+INC-20075,2026-07-28,Paris,Software,Normal,4.0,Yes,2
+INC-20076,2026-09-18,Madrid,Software,Normal,18.9,Yes,2
+INC-20077,2026-09-25,Paris,Account & Access,High,5.6,Yes,2
+INC-20078,2026-09-17,Casablanca,Hardware,Critical,5.3,No,5
+INC-20079,2026-07-25,Dubai,Software,Normal,18.2,Yes,3
+INC-20080,2026-07-14,Dubai,Hardware,Normal,11.3,Yes,3
+INC-20081,2026-09-05,Casablanca,Hardware,Critical,1.3,Yes,5
+INC-20082,2026-09-06,Lisbon,Hardware,Normal,22.5,Yes,4
+INC-20083,2026-09-17,Dubai,Security,Critical,4.1,No,5
+INC-20084,2026-08-30,Dubai,Account & Access,Normal,2.6,Yes,4
+INC-20085,2026-08-05,Paris,Account & Access,High,8.4,No,4
+INC-20086,2026-07-31,Madrid,Software,Normal,9.1,Yes,4
+INC-20087,2026-07-18,Paris,Software,Normal,25.2,No,3
+INC-20088,2026-09-08,Dubai,Hardware,Normal,27.2,No,5
+INC-20089,2026-08-19,Casablanca,Hardware,High,11.9,No,5
+INC-20090,2026-08-08,Dubai,Software,High,5.3,Yes,5
+INC-20091,2026-09-16,Madrid,Software,Normal,28.3,No,5
+INC-20092,2026-09-24,Dubai,Software,Normal,13.8,Yes,3
+INC-20093,2026-09-18,Lisbon,Account & Access,High,0.5,Yes,2
+INC-20094,2026-08-29,Paris,Hardware,Normal,15.8,Yes,2
+INC-20095,2026-08-28,Dubai,Software,Normal,12.9,Yes,4
+INC-20096,2026-08-02,Casablanca,Account & Access,High,13.4,No,5
+INC-20097,2026-08-14,Casablanca,Hardware,Normal,20.5,Yes,2
+INC-20098,2026-07-03,Lisbon,Security,Normal,23.3,Yes,3
+INC-20099,2026-07-15,Madrid,Hardware,Normal,14.2,Yes,4
+INC-20100,2026-09-30,Casablanca,Hardware,Normal,17.5,Yes,3
+INC-20101,2026-07-04,Dubai,Security,Normal,30.6,No,5
+INC-20102,2026-09-14,Paris,Security,Normal,14.9,Yes,2
+INC-20103,2026-09-26,Lisbon,Network,Normal,16.3,Yes,2
+INC-20104,2026-08-17,Casablanca,Software,Normal,17.3,Yes,4
+INC-20105,2026-09-01,Dubai,Hardware,Normal,38.1,No,3
+INC-20106,2026-09-22,Madrid,Software,Normal,34.1,No,5
+INC-20107,2026-09-14,Casablanca,Software,High,7.2,Yes,4
+INC-20108,2026-08-29,Lisbon,Account & Access,Low,67.4,No,5
+INC-20109,2026-08-11,Madrid,Software,Normal,22.6,Yes,4
+INC-20110,2026-08-05,Lisbon,Software,Normal,25.7,No,2
+INC-20111,2026-07-31,Paris,Software,Low,32.5,Yes,5
+INC-20112,2026-07-03,Casablanca,Network,Normal,9.8,Yes,4
+INC-20113,2026-08-09,Lisbon,Hardware,Normal,15.6,Yes,4
+INC-20114,2026-08-12,Madrid,Software,Normal,12.6,Yes,5
+INC-20115,2026-07-16,Lisbon,Software,Normal,18.6,Yes,3
+INC-20116,2026-08-05,Lisbon,Hardware,Normal,12.3,Yes,4
+INC-20117,2026-08-07,Casablanca,Security,Critical,3.1,Yes,3
+INC-20118,2026-09-09,Madrid,Software,Critical,3.8,Yes,3
+INC-20119,2026-07-14,Dubai,Network,High,11.3,No,5
+INC-20120,2026-07-07,Madrid,Software,Low,20.8,Yes,5
+INC-20121,2026-09-01,Casablanca,Hardware,Low,56.4,No,3
+INC-20122,2026-08-08,Casablanca,Hardware,Normal,25.7,No,3
+INC-20123,2026-09-16,Lisbon,Hardware,High,3.9,Yes,5
+INC-20124,2026-09-14,Dubai,Software,Normal,12.9,Yes,4
+INC-20125,2026-07-13,Paris,Network,Low,46.5,No,4
+INC-20126,2026-07-23,Lisbon,Network,Low,32.4,Yes,2
+INC-20127,2026-09-27,Paris,Hardware,Normal,13.8,Yes,4
+INC-20128,2026-08-28,Casablanca,Account & Access,Normal,15.8,Yes,3
+INC-20129,2026-09-19,Paris,Security,Critical,0.9,Yes,5
+INC-20130,2026-07-20,Madrid,Hardware,Low,20.4,Yes,3
+INC-20131,2026-08-09,Madrid,Hardware,Low,11.0,Yes,5
+INC-20132,2026-09-28,Dubai,Hardware,Normal,10.6,Yes,4
+INC-20133,2026-07-11,Madrid,Software,Normal,4.6,Yes,4
+INC-20134,2026-09-25,Lisbon,Hardware,Low,16.4,Yes,2
+INC-20135,2026-08-04,Paris,Security,High,2.6,Yes,5
+INC-20136,2026-08-05,Paris,Software,Normal,13.0,Yes,5
+INC-20137,2026-07-12,Madrid,Network,Normal,10.9,Yes,2
+INC-20138,2026-09-27,Dubai,Account & Access,Normal,21.7,Yes,4
+INC-20139,2026-09-09,Madrid,Network,Normal,23.8,Yes,4
+INC-20140,2026-09-04,Casablanca,Hardware,High,8.4,No,5
+INC-20141,2026-08-16,Dubai,Software,Low,22.3,Yes,2
+INC-20142,2026-08-06,Dubai,Hardware,Normal,12.6,Yes,5
+INC-20143,2026-09-16,Madrid,Hardware,Critical,3.6,Yes,2
+INC-20144,2026-07-15,Dubai,Network,Low,11.7,Yes,2
+INC-20145,2026-09-30,Dubai,Network,Low,29.4,Yes,5
+INC-20146,2026-09-09,Paris,Security,Normal,33.6,No,5
+INC-20147,2026-07-18,Dubai,Hardware,Normal,24.8,No,4
+INC-20148,2026-07-01,Madrid,Security,High,5.8,Yes,4
+INC-20149,2026-09-23,Lisbon,Account & Access,Normal,14.9,Yes,5
+INC-20150,2026-09-08,Dubai,Software,Normal,20.3,Yes,5
+INC-20151,2026-09-28,Dubai,Security,Critical,3.1,Yes,2
+INC-20152,2026-08-18,Dubai,Software,Normal,28.8,No,3
+INC-20153,2026-09-03,Casablanca,Software,Low,50.2,No,5
+INC-20154,2026-07-02,Paris,Hardware,High,7.3,Yes,5
+INC-20155,2026-07-10,Madrid,Account & Access,Critical,0.5,Yes,5
+INC-20156,2026-09-25,Lisbon,Network,High,9.8,No,5
+INC-20157,2026-09-01,Casablanca,Security,High,8.7,No,3
+INC-20158,2026-07-30,Casablanca,Network,High,7.3,Yes,5
+INC-20159,2026-09-29,Madrid,Security,Critical,4.0,Yes,2
+INC-20160,2026-08-07,Madrid,Hardware,High,5.2,Yes,4
+INC-20161,2026-08-22,Paris,Software,Low,9.7,Yes,3
+INC-20162,2026-09-18,Paris,Hardware,High,5.4,Yes,5
+INC-20163,2026-08-29,Casablanca,Account & Access,Low,24.4,Yes,5
+INC-20164,2026-07-21,Casablanca,Account & Access,Normal,12.4,Yes,5
+INC-20165,2026-08-08,Madrid,Security,Critical,2.1,Yes,5
+INC-20166,2026-08-19,Dubai,Account & Access,Low,23.0,Yes,2
+INC-20167,2026-09-12,Casablanca,Hardware,Normal,16.0,Yes,5
+INC-20168,2026-09-26,Casablanca,Software,Normal,33.4,No,5
+INC-20169,2026-07-30,Paris,Account & Access,High,5.4,Yes,4
+INC-20170,2026-09-23,Paris,Network,Normal,14.8,Yes,2
+INC-20171,2026-08-09,Madrid,Account & Access,Normal,20.6,Yes,3
+INC-20172,2026-08-23,Paris,Hardware,Normal,17.7,Yes,3
+INC-20173,2026-08-16,Paris,Hardware,Normal,0.5,Yes,4
+INC-20174,2026-08-07,Madrid,Account & Access,High,6.5,Yes,2
+INC-20175,2026-07-29,Dubai,Software,Low,52.6,No,4
+INC-20176,2026-08-03,Lisbon,Hardware,Normal,8.9,Yes,2
+INC-20177,2026-09-25,Madrid,Software,Normal,19.3,Yes,2
+INC-20178,2026-09-18,Lisbon,Network,Normal,28.8,No,4
+INC-20179,2026-07-09,Madrid,Account & Access,Low,24.1,Yes,5
+INC-20180,2026-07-05,Madrid,Hardware,Low,22.4,Yes,5
+INC-20181,2026-09-07,Lisbon,Hardware,Low,47.7,No,5
+INC-20182,2026-08-23,Casablanca,Network,Normal,27.5,No,5
+INC-20183,2026-08-05,Dubai,Network,High,11.4,No,5
+INC-20184,2026-07-13,Madrid,Security,Critical,3.3,Yes,4
+INC-20185,2026-07-16,Casablanca,Hardware,Normal,35.9,No,3
+INC-20186,2026-07-03,Casablanca,Network,Normal,14.7,Yes,4
+INC-20187,2026-09-11,Lisbon,Software,Low,44.5,No,3
+INC-20188,2026-07-30,Madrid,Network,High,14.5,No,3
+INC-20189,2026-08-05,Paris,Account & Access,Normal,23.2,Yes,4
+INC-20190,2026-07-04,Paris,Account & Access,Low,29.0,Yes,2
+INC-20191,2026-09-14,Casablanca,Software,High,7.0,Yes,3
+INC-20192,2026-07-09,Dubai,Account & Access,Normal,25.0,No,5
+INC-20193,2026-07-14,Lisbon,Account & Access,Normal,13.9,Yes,2
+INC-20194,2026-09-23,Lisbon,Account & Access,High,8.8,No,4
+INC-20195,2026-07-08,Dubai,Software,Critical,5.6,No,2
+INC-20196,2026-07-10,Casablanca,Software,High,7.9,Yes,4
+INC-20197,2026-08-05,Madrid,Network,Low,20.7,Yes,5
+INC-20198,2026-08-28,Lisbon,Security,High,4.6,Yes,5
+INC-20199,2026-09-22,Paris,Hardware,Normal,11.0,Yes,5
+INC-20200,2026-08-13,Dubai,Software,Low,13.5,Yes,5
+INC-20201,2026-08-24,Paris,Software,Low,31.2,Yes,5
+INC-20202,2026-07-12,Dubai,Hardware,High,10.6,No,2
+INC-20203,2026-07-17,Lisbon,Account & Access,Normal,8.8,Yes,4
+INC-20204,2026-09-24,Dubai,Network,Normal,15.9,Yes,2
+INC-20205,2026-08-15,Paris,Security,High,11.4,No,5
+INC-20206,2026-09-10,Madrid,Hardware,Low,47.7,No,2
+INC-20207,2026-08-24,Lisbon,Account & Access,Normal,33.7,No,2
+INC-20208,2026-09-27,Madrid,Network,Normal,0.5,Yes,2
+INC-20209,2026-08-09,Paris,Hardware,Normal,27.4,No,3
+INC-20210,2026-07-19,Casablanca,Network,Normal,16.0,Yes,2
+INC-20211,2026-08-23,Madrid,Account & Access,Low,26.9,Yes,4
+INC-20212,2026-07-11,Casablanca,Account & Access,Normal,21.5,Yes,3
+INC-20213,2026-09-25,Dubai,Hardware,Normal,28.5,No,5
+INC-20214,2026-07-28,Lisbon,Network,Normal,24.8,No,2
+INC-20215,2026-09-25,Madrid,Software,Low,27.9,Yes,2
+INC-20216,2026-07-08,Casablanca,Hardware,Critical,1.6,Yes,3
+INC-20217,2026-07-18,Casablanca,Software,Low,37.2,Yes,2
+INC-20218,2026-07-17,Dubai,Software,Normal,12.6,Yes,3
+INC-20219,2026-08-15,Casablanca,Software,High,14.4,No,5
+INC-20220,2026-08-10,Lisbon,Hardware,High,11.1,No,5
+INC-20221,2026-08-23,Madrid,Network,Normal,17.7,Yes,3
+INC-20222,2026-09-27,Madrid,Account & Access,Normal,28.9,No,2
+INC-20223,2026-08-25,Dubai,Software,Low,19.3,Yes,4
+INC-20224,2026-07-22,Casablanca,Account & Access,Low,25.5,Yes,2
+INC-20225,2026-08-14,Paris,Software,Low,11.8,Yes,3
+INC-20226,2026-07-23,Lisbon,Hardware,Normal,38.3,No,3
+INC-20227,2026-07-23,Dubai,Account & Access,Normal,32.1,No,5
+INC-20228,2026-09-21,Lisbon,Network,High,6.5,Yes,4
+INC-20229,2026-07-20,Madrid,Account & Access,Normal,10.6,Yes,4
+INC-20230,2026-07-10,Madrid,Network,Normal,23.7,Yes,5
+INC-20231,2026-08-06,Casablanca,Software,Low,64.7,No,5
+INC-20232,2026-07-06,Dubai,Software,Normal,28.3,No,3
+INC-20233,2026-07-20,Madrid,Software,Normal,29.5,No,2
+INC-20234,2026-08-01,Dubai,Software,Low,31.3,Yes,5
+INC-20235,2026-08-16,Dubai,Software,Normal,14.9,Yes,4
+INC-20236,2026-09-19,Madrid,Network,Low,45.5,No,2
+INC-20237,2026-08-19,Lisbon,Software,Normal,16.9,Yes,3
+INC-20238,2026-07-19,Madrid,Software,Normal,34.1,No,4
+INC-20239,2026-08-20,Casablanca,Security,High,11.9,No,4
+INC-20240,2026-08-12,Paris,Network,Normal,30.2,No,2

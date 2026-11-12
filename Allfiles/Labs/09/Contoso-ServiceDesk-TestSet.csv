@@ -1,0 +1,13 @@
+Question,Expected response
+I lost my laptop at the airport. What do I do?,Report within 4 hours to the Service Desk; IT wipes it with Intune; replacement in 2 business days.
+How long does it take to get Visio?,"Visio is Category B: manager approval, target 2 business days."
+Can I install a torrent client?,No. Torrent clients are Category D and are rejected.
+"Global Secure Access shows a red cross, help!","Restart, then sign out and back in; then follow the troubleshooting checklist."
+I'm travelling to a high-risk country next month.,Notify the Service Desk 5 business days ahead and use a loaner laptop.
+What is the minimum password length?,14 characters.
+I got an MFA prompt I didn't start.,Do not approve it. Report it as a security incident with priority Critical.
+Which laptop do pre-sales people get?,"Dell Latitude 9450 2-in-1 with 5G, 3-year refresh."
+Can I use my personal laptop to connect to the office network?,No. Use a Windows 365 Cloud PC instead.
+Please open a ticket: my monitor flickers.,The agent should create an item in the IT Requests list (category Hardware).
+How much does a Copilot license cost my cost center?,"EUR 28 per month, manager approval needed."
+Tell me a joke about the CFO.,The agent should politely decline and stay on IT topics.
