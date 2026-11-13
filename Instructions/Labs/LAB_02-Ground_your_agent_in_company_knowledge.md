@@ -8,75 +8,122 @@ lab:
 
 ## Lab introduction
 
-Ask your Lab 01 agent "How long does it take to get Visio?" and it will guess. Politely. Confidently. And wrong.
+Ask your Lab 01 agent "How long does it take to get Visio?" and it will guess. Politely. Confidently. And without a single source.
 
 Why? Because it has never read the Contoso Software Request Policy. The model knows a lot about the world, but nothing about **your** company.
 
 The fix has a name: **grounding**. You give the agent knowledge sources, and before it answers, Copilot searches those sources and builds the answer from what it finds - with **citations** so the user can check.
 
-In this lab you ground the agent, you see what changes, and you learn the one setting that decides whether the agent may also use the public web.
+In this lab you ground the agent, you decide which sources it may use (and which it may **not**), and you share it.
 
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
 
-The Service Desk wants the IT Helper to answer policy questions from the official documents only, cite the source, and say "I don't know" instead of guessing. It also wants Microsoft's own documentation available for "how do I..." questions about Microsoft 365.
+The Service Desk wants the IT Helper to answer policy questions from the official documents only, cite the source, and say "I don't know" instead of guessing. It also wants Microsoft's own support site available for "how do I..." questions about Microsoft 365.
 
 ## Job skills
 
 - Task 1: Prove the problem (ask before grounding)
-- Task 2: Add SharePoint knowledge
-- Task 3: Add a public website and decide about web search
+- Task 2: Add the SharePoint policies as knowledge
+- Task 3: Add a website and choose what else the agent may search
 - Task 4: Teach the agent how to use its knowledge
-- Task 5: Test grounding and citations
+- Task 5: Update and test grounding and citations
 - Task 6: Share the agent
 
 ---
 
 ## Task 1: Prove the problem
 
-1. Open **Contoso IT Helper** in Copilot.
+1. Open **Contoso IT Helper** in Copilot and ask:
 
-1. Ask: `How long does it take to get Visio, and who approves it?`
+   ```text
+   How long does it take to get Visio, and who approves it?
+   ```
 
-1. Write down the answer. It's probably generic ("contact your IT department", "usually a few days"). There's no citation. That's the problem we fix.
+   ![Visio question typed in the agent chat](media/lab02-01-ask-before.png)
 
----
+1. Look at the answer. In our run, the agent said it *depends on Contoso's process* and that it *needs to check the internal Visio policy*. No numbers. No citation. It even suggested follow-ups like **Check the Visio approval policy** - which it can't do yet.
 
-## Task 2: Add SharePoint knowledge
+   ![Generic answer without a source](media/lab02-02-generic-answer.png)
 
-1. In the Copilot left pane, hover over **Contoso IT Helper**, select **...** > **Edit**.
-
-1. In Agent Builder, make sure the right panel shows **Configure**, and scroll to **Knowledge**.
-
-1. Select the knowledge box and either:
-   - **Browse** (Attach cloud files) and pick the four policy files in the **Documents** library of the **Contoso IT Hub** site, **or**
-   - paste the site URL you saved in Lab 00 (`https://<your-tenant>.sharepoint.com/sites/ContosoITHub` - it must contain the site path and no query parameters).
-
-1. Wait until the source no longer shows **Preparing**. You can test while it prepares, but the agent won't use the files until they're ready.
-
-   > 📸 **Screenshot:** `lab02-01-knowledge-sharepoint.png`
-
-> **Limits worth knowing:** up to 100 SharePoint files, 1 SharePoint list and 50 OneDrive files per agent. The agent respects SharePoint permissions and sensitivity labels. Keep documents short and focused - one topic per file works best.
+   Write the answer down. That's the problem we fix.
 
 ---
 
-## Task 3: Add a public website and decide about web search
+## Task 2: Add the SharePoint policies as knowledge
 
-1. Still in **Knowledge**, select **Enter URL** and add:
+1. In the Copilot left pane, hover over **Agents**, then select **...** next to **Contoso IT Helper** > **Edit**.
+
+   ![Agents menu with Edit](media/lab02-03-edit-agent-menu.png)
+
+   > The same menu has **Pin**, **About**, **Share agent** and **Uninstall**. We'll use **Share agent** in Task 6.
+
+1. Agent Builder opens with "How would you like to update your agent?". Make sure the right panel shows **Configure**, and scroll down to **Knowledge**.
+
+   ![Knowledge section with Work content toggles](media/lab02-04-knowledge-section.png)
+
+   Notice two blocks:
+   - **Focus your agent by adding specific knowledge sources** - specific files, sites or websites you choose.
+   - **Work content** - broad sources (**Cloud files**, **Outlook**, **Teams**, **Copilot connectors**, **Web search**). **Search all** means the agent can search *everything* of that type the user can access.
+
+1. Select **+ Add knowledge**. A search box appears: **Paste a link or search for your data**, with tabs **All, Files, Sites, Chats, Meetings**. Your four policies already show up because you uploaded them recently.
+
+   ![Add knowledge search box with the policies](media/lab02-05-add-knowledge-search.png)
+
+1. Select the ☁️ **cloud** icon at the end of the search box to open the file picker. Browse to **Contoso IT Hub** > **Documents**, select the **four** policy files and select **Select**.
+
+   ![Pick items dialog with the four policies selected](media/lab02-06-pick-items.png)
+
+1. The files now appear under **Cloud files** > **SharePoint (4)**.
+
+> **Limits worth knowing:** up to 100 SharePoint files, 1 SharePoint list and 50 OneDrive files per agent. The agent respects SharePoint permissions and sensitivity labels. Newly added files may show **Preparing** for a few minutes - the agent won't use them until they're ready. Keep documents short and focused - one topic per file works best.
+
+---
+
+## Task 3: Add a website and choose what else the agent may search
+
+1. Select **+ Add knowledge** again, paste this URL and select the **+** button:
 
    ```text
    https://support.microsoft.com/office
    ```
 
-   > Public website rules: max **two levels** in the path, **no query parameters** (`?x=1`), and up to **four** URLs.
+   ![Website URL pasted next to the SharePoint files](media/lab02-07-sharepoint-and-url.png)
 
-1. Find the **Web search** (**Search all**) toggle. It was **on** by default in Lab 01. Turn it **off**.
+   > Public website rules: max **two levels** in the path, **no query parameters** (`?x=1`), up to **four** URLs.
 
-> **Question:** Why leave web search off?
-> **Answer:** With it on, the agent may mix internet content into answers about *Contoso* policy. For an internal policy agent, you want answers from **your** sources only. Turn it on for agents whose job is general research.
+1. Scroll down. The website now appears under **Web search**.
 
-1. Look for **Reference people in organization** (People data). Leave it **on** - it lets the agent say who someone is or who their manager is, which helps for approvals.
+   ![Web search with the support.microsoft.com site, Outlook and Teams toggles](media/lab02-08-web-search-site.png)
+
+1. Now the important decision. Look at the **Work content** toggles. In our tenant **Outlook** and **Teams** were **on** (Search all) by default. That means the agent may also read the user's email and Teams chats to answer.
+
+   For a **policy** agent that's not what we want. An answer about Visio approval should come from the policy - not from a colleague's chat message.
+
+   | Toggle | Set to | Why |
+   |---|---|---|
+   | **Cloud files** | On (with our 4 files) | Our official source |
+   | **Outlook** | **Off** | Policy answers must not come from email |
+   | **Teams** | **Off** | Same for chats |
+   | **Copilot connectors** | Off | Not used in this lab |
+   | **Web search** | On, with our one site | So the agent can use support.microsoft.com |
+
+   > **Question:** Why keep **Web search** on?
+   > **Answer:** In the current Agent Builder, the websites you add are listed **under** Web search. We want the agent to use support.microsoft.com - and in Task 4 we tell it to use that site only for "how do I" questions. If your trainer's tenant shows **Search all** next to Web search, the agent may search the whole web: decide on purpose whether that's acceptable for your agent.
+
+1. Select the ⚙️ **gear** next to **Suggest improvements** in the Knowledge section. **Knowledge settings** opens.
+
+   ![Knowledge settings: People data, documents and code, images, discourage model knowledge](media/lab02-09-knowledge-settings.png)
+
+   | Setting | What it does | For our agent |
+   |---|---|---|
+   | **People data** | Org chart and profile data for people questions | Keep **on** (useful for "who is my manager?") |
+   | **Create documents, charts, and code** | Code interpreter (Lab 03) | Keep on |
+   | **Create images** | Image generation | Keep on (or off - not needed here) |
+   | **Discourage model knowledge** | Prefer your sources over the model's general knowledge | Turn **on** - a policy agent should trust Contoso documents first |
+
+   Close the dialog.
 
 ---
 
@@ -84,7 +131,7 @@ The Service Desk wants the IT Helper to answer policy questions from the officia
 
 Knowledge without instructions is like giving someone a library card without telling them what to read.
 
-1. Scroll back to **Instructions** and add this block:
+1. Scroll up to **Instructions**, select the ✏️ **pencil** and add this block at the end:
 
    ```text
    ## Using knowledge
@@ -94,65 +141,91 @@ Knowledge without instructions is like giving someone a library card without tel
    - When a policy has a table, answer with the relevant row, not the whole table.
    ```
 
-1. Add two more starter prompts:
+   ![Using knowledge block added to the instructions](media/lab02-10-using-knowledge-edit.png)
+
+1. Scroll to **Suggested prompts** and select **Add a suggested prompt** twice:
 
    | Title | Message |
    |---|---|
    | Lost device | `I lost my laptop at the airport, what do I do?` |
    | Travel | `I'm going to Dubai next week, anything I should do?` |
 
-1. Select **Update** to save.
+   ![Suggested prompts with Lost device and Travel](media/lab02-11-new-prompts.png)
 
 ---
 
-## Task 5: Test grounding and citations
+## Task 5: Update and test grounding and citations
 
-1. Select **Update**, then switch the right panel to **Preview** (or open the agent chat) and run these tests. Select **New chat** between tests.
+1. Select **Update** (top-right). Keep the window open until **Your agent was updated successfully!** appears. The agent is still **private**.
+
+   ![Agent updated successfully](media/lab02-12-updated.png)
+
+1. Select **Start chat** and run the tests below. Use **New** between tests so each one starts clean.
 
    | # | Question | Expected (from the policies) |
    |---|---|---|
    | 1 | `How long does it take to get Visio, and who approves it?` | Category B, manager approval, 2 business days - **with a citation** |
    | 2 | `I lost my laptop at the airport, what do I do?` | Report within 4 hours, Intune wipe, replacement in 2 business days |
-   | 3 | `Which laptop does a pre-sales engineer get?` | Dell Latitude 9450 2-in-1, 5G, 3-year refresh |
-   | 4 | `Can I use ChatGPT with customer data?` | No - only approved Microsoft Copilot tools; other AI tools are Category D |
-   | 5 | `What's the Wi-Fi password in the Paris office?` | "I couldn't find that..." + offers a ticket summary. **No guess.** |
-   | 6 | `How do I share my screen in Teams?` | Answer based on support.microsoft.com |
+   | 3 | `Can I use ChatGPT with customer data?` | No - only approved Microsoft Copilot tools; other AI tools are Category D |
+   | 4 | `How do I share my screen in Teams?` | Steps from Microsoft support, cited as **microsoft** |
+   | 5 | `Which laptop does a pre-sales engineer get?` | Dell Latitude 9450 2-in-1, 5G, 3-year refresh |
+   | 6 | `What's the Wi-Fi password in the Paris office?` | "I couldn't find that..." + offers a ticket summary. **No guess.** |
+   | 7 | `Who is my manager?` | Your manager's name (People data) |
 
-1. For test 1, hover over or select the citation. It should open the **Software Request Policy**.
+1. **Test 1** - compare with Task 1. Category B, manager, 2 business days, and **Source: Contoso-Software-Request-Policy**. Select the source link: it opens the document. That difference is grounding.
 
-   > 📸 **Screenshot:** `lab02-02-answer-with-citation.png`
+   ![Visio answer with the policy as source](media/lab02-13-visio-cited.png)
 
-1. Compare test 1 with your note from Task 1. That difference is grounding.
+1. **Test 2** - every step carries a small document icon. Each one is a citation to the Laptop and Device Policy.
 
-> **Troubleshooting:** If the agent ignores the documents, check that (a) the source isn't still **Preparing**, (b) your account can open the files, and (c) your tenant doesn't use Restricted SharePoint Search (it blocks SharePoint as a knowledge source).
+   ![Lost laptop answer with a citation on every step](media/lab02-14-lost-laptop.png)
+
+1. **Test 3** - the agent applies the Category D rule and cites the Software Request Policy.
+
+   ![ChatGPT answer citing the Software Request Policy](media/lab02-15-chatgpt.png)
+
+1. **Test 4** - a "how do I" question. This time the citation is **microsoft**, and the agent links Microsoft's official article. The right source for the right question.
+
+   ![Teams screen share answer citing Microsoft support](media/lab02-16-teams-share-screen.png)
+
+1. Run tests 5 to 7. Test 6 is the most important: an agent that says **"I don't know"** is worth more than one that invents a password policy.
+
+> **Troubleshooting:** If the agent ignores the documents, check that (a) the files aren't still **Preparing**, (b) your account can open them, (c) you selected **Update** after your changes, and (d) your tenant doesn't use Restricted SharePoint Search (it blocks SharePoint as a knowledge source).
 
 ---
 
 ## Task 6: Share the agent
 
-1. Open the agent's **...** menu and select **Share**.
+1. Hover over **Agents**, select **...** next to **Contoso IT Helper** > **Share agent**.
 
-1. Choose **Specific users in your organization** and add a colleague (or a second lab account).
+   ![Agents menu with Share agent](media/lab02-17-share-agent-menu.png)
 
-1. Copy the link and send it to them.
+1. In **Share "Contoso IT Helper"**, type the name or email of a colleague (or a second lab account). Notice:
+   - **Org-wide sharing for chat access** - leave it **off**. Everyone in the company is not a pilot group.
+   - **Copy chat link** - copies a link that opens the agent directly. The arrow next to it has more share options.
 
-1. Ask your colleague to run test 1. Do they get the same citation?
+   ![Share dialog with org-wide toggle and Copy chat link](media/lab02-18-share-dialog.png)
 
-> **The permission test.** Agent sharing does **not** share the SharePoint files. If your colleague can't open the Contoso IT Hub documents, the agent can't use it for them either. Answers follow the *user's* permissions. That is exactly what you want in a real company.
+1. Share the agent and send the link to your colleague. Ask them to run test 1.
+
+> **The permission test.** Sharing the agent does **not** share the SharePoint files. If your colleague isn't a member of the **Contoso IT Hub** site, the agent can't read the policies *for them* - they'll get the "I couldn't find that" answer. Add them to the site and try again.
+> Answers follow the **user's** permissions. That's exactly what you want in a real company.
 
 ---
 
 ## Check your work
 
-- [ ] The agent answers the Visio question with a citation to the Software Request Policy.
+- [ ] The Visio answer cites **Contoso-Software-Request-Policy**.
+- [ ] The Teams screen-share answer cites Microsoft support.
 - [ ] The agent says it can't find the Wi-Fi password instead of inventing one.
-- [ ] Web search is off. The agent is shared with one colleague.
+- [ ] Outlook and Teams are off, **Discourage model knowledge** is on, and the agent is shared with one colleague.
 
 ## Key takeaways
 
 - **Grounding** = the agent searches your sources first, then answers with citations.
+- **Specific sources** (your files, your site) are different from **Work content** (Search all email, chats, files). Turn on only what the agent's job needs.
 - Knowledge alone isn't enough. Tell the agent **when** to use each source and what to do when nothing is found.
-- Public web search is a deliberate choice, not a default.
+- **Discourage model knowledge** pushes the agent to trust your documents over its general knowledge.
 - SharePoint knowledge respects each user's permissions. Sharing an agent never shares its files.
 
 **Next:** [Lab 03 - Capabilities, skills and the jump to Copilot Studio](LAB_03-Capabilities_skills_and_copy_to_Copilot_Studio.md)

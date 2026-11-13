@@ -37,7 +37,7 @@ The Service Desk manager sends a CSV export of Q3 tickets every quarter and asks
 
 1. Edit **Contoso IT Helper** and select **Configure**.
 
-1. Under **Capabilities**, check that **Create documents, charts, and code** is **on**. Leave **Create images** on too.
+1. In the **Knowledge** section, select the ⚙️ **gear** (Knowledge settings) and check that **Create documents, charts, and code** is **on**. Leave **Create images** on too.
 
 1. Switch the right panel to **Preview**, select the **+** in the chat box and upload `Allfiles/Labs/03/Contoso-IT-Tickets-Q3-2026.csv`.
 
