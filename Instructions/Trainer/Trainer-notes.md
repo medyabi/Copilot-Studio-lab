@@ -26,7 +26,7 @@ These labs were written in **November 2026** against preview features of the Git
 | Lab | What to check |
 |---|---|
 | 03 | Skills in Agent Builder: still under **Configure > Skills > Add**; zip limits (8 skills, 50 MB) |
-| 03 | **Copy to Copilot Studio**: which harness the copy lands on in your tenant |
+| 03 | **Copy to Copilot Studio** lands in the classic designer (standard harness) - confirmed Nov 2026; skills are not copied |
 | 05 | MCP custom server dialog fields (Name / Description / Server URL / Authentication) |
 | 06 | Actions placed **after "Respond to the agent"** keep running in your environment (run history shows the approval step). If not, split the approval into a second workflow triggered by the SharePoint item. |
 | 07 | Skill upload in Copilot Studio accepts the `.zip` package (otherwise upload `SKILL.md`) |
