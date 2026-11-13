@@ -39,7 +39,7 @@ The Service Desk manager sends a CSV export of Q3 tickets every quarter and asks
 
 1. Under **Capabilities**, check that **Create documents, charts, and code** is **on**. Leave **Create images** on too.
 
-1. On **Try it**, select the **+** in the chat box and upload `Allfiles/Labs/03/Contoso-IT-Tickets-Q3-2026.csv`.
+1. Switch the right panel to **Preview**, select the **+** in the chat box and upload `Allfiles/Labs/03/Contoso-IT-Tickets-Q3-2026.csv`.
 
 1. Ask:
 
@@ -66,7 +66,7 @@ The Service Desk manager sends a CSV export of Q3 tickets every quarter and asks
 
 Every quarter, the manager asks for the same report. Typing the same five-line prompt each time is the definition of a skill.
 
-1. Select the **Describe** tab and paste:
+1. In the Agent Builder chat (left pane), paste:
 
    ```text
    Add a reusable skill called "quarterly-sla-report".
@@ -82,7 +82,7 @@ Every quarter, the manager asks for the same report. Typing the same five-line p
 
 1. Select **Configure**, expand **Skills**, and confirm that **quarterly-sla-report** was created. Select it and read its instructions.
 
-1. On **Try it**, start a **New chat**, upload the CSV again and type only: `Quarterly report please.`
+1. In **Preview**, start a **New chat**, upload the CSV again and type only: `Quarterly report please.`
 
 1. Check: did you get a Word document with the same structure you asked for? Run it a second time. Same structure? That's the point of a skill.
 
@@ -103,7 +103,7 @@ Skills are **portable**. The same package works in Agent Builder, in Copilot Stu
 
    > Always upload the **.zip**, never the `SKILL.md` alone.
 
-1. Review the name, description and instructions, then go to **Try it** and test:
+1. Review the name, description and instructions, then switch to **Preview** and test:
 
    | Message | Expected |
    |---|---|

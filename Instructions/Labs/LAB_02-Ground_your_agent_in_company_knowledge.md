@@ -47,7 +47,7 @@ The Service Desk wants the IT Helper to answer policy questions from the officia
 
 1. In the Copilot left pane, hover over **Contoso IT Helper**, select **...** > **Edit**.
 
-1. Select the **Configure** tab and scroll to **Knowledge**.
+1. In Agent Builder, make sure the right panel shows **Configure**, and scroll to **Knowledge**.
 
 1. Select the knowledge box and either:
    - **Browse** (Attach cloud files) and pick the four policy files in the **Documents** library of the **Contoso IT Hub** site, **or**
@@ -71,7 +71,7 @@ The Service Desk wants the IT Helper to answer policy questions from the officia
 
    > Public website rules: max **two levels** in the path, **no query parameters** (`?x=1`), and up to **four** URLs.
 
-1. Look for the **Search all websites** toggle. Leave it **off**.
+1. Find the **Web search** (**Search all**) toggle. It was **on** by default in Lab 01. Turn it **off**.
 
 > **Question:** Why leave web search off?
 > **Answer:** With it on, the agent may mix internet content into answers about *Contoso* policy. For an internal policy agent, you want answers from **your** sources only. Turn it on for agents whose job is general research.
@@ -107,7 +107,7 @@ Knowledge without instructions is like giving someone a library card without tel
 
 ## Task 5: Test grounding and citations
 
-1. On **Try it** (or in the agent chat), run these tests. Select **New chat** between tests.
+1. Select **Update**, then switch the right panel to **Preview** (or open the agent chat) and run these tests. Select **New chat** between tests.
 
    | # | Question | Expected (from the policies) |
    |---|---|---|
