@@ -197,6 +197,10 @@ This list is the "inbox" of our Service Desk. In Lab 05 an agent writes into it.
 
    ![Edit column panel for Status with its six choices](media/lab00-18-status-column.png)
 
+   And the **AssignedTeam** column, with the five teams the agents route to:
+
+   ![Edit column panel for AssignedTeam with its five choices](media/lab00-20-assignedteam-column.png)
+
    > **Made a mistake?** Select the column header > **Column settings** > **Edit** to fix the name, the choices or the default value.
 
 1. Check the result. Your list shows **Title, Description, Category, Priority, Status, AssignedTeam, RequestedBy** (scroll right for **TriageNotes**).
@@ -208,10 +212,18 @@ This list is the "inbox" of our Service Desk. In Lab 05 an agent writes into it.
    | Field | Value |
    |---|---|
    | Title | `Docking station not detected` |
-   | Description | `My Dell dock stopped detecting my second screen after the update.` |
-   | Status | New |
+   | Description | `My Dell dock stopped detecting my second screen after the update` |
+   | Category | Hardware |
+   | Priority | Normal (already filled in - that's the default value you set) |
+   | Status | New (default) |
 
-   Leave Category, Priority and AssignedTeam empty - in Lab 08 an agent fills them in for you.
+   Select **Save**.
+
+   ![New item form for the Docking station test request](media/lab00-21-new-test-item.png)
+
+   > Notice that **Priority** and **Status** were filled in for you. That's the **default value** at work. Later, when an agent creates an item and forgets a field, the default keeps the data clean.
+   >
+   > The grey text under each field is the column **description**. Keep it readable (for example `Hardware, Software, Network, Account & Access, Security`) - it's the hint your colleagues see when they fill in the form.
 
 ---
 
