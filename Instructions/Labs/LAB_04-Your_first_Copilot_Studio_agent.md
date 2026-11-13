@@ -35,7 +35,7 @@ The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent
 
 ## Task 1: Create the agent and write its instructions
 
-1. Go to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) and check that the correct environment is selected (top-right).
+1. Go to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) and check that the environment you chose in Lab 00 is selected (globe icon in the left rail).
 
 1. On **Home**, select the **Agent** tile. (Or **Agents** > **New agent**.) The agent designer opens on the **Build** tab with the name field active.
 
@@ -85,7 +85,7 @@ The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent
 
 1. In **Add knowledge**, choose **SharePoint**.
 
-1. Paste the URL of the **IT Policies** folder (or the **Contoso IT Hub** site) and confirm.
+1. Paste the URL of the **Contoso IT Hub** site (`https://<your-tenant>.sharepoint.com/sites/ContosoITHub`) or browse to its **Documents** library, and confirm.
 
 1. Give the source a clear **name** and **description**. This matters: the runtime reads descriptions to decide when to search a source.
 

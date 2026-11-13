@@ -93,7 +93,7 @@ Before clicking anything, answer five questions. Write the answers down - your t
 
 1. **Skills** > upload `Allfiles/Labs/03/it-ticket-triage.zip`.
 
-1. **Knowledge** > **SharePoint** > the **IT Policies** folder (name: `Contoso IT policies`).
+1. **Knowledge** > **SharePoint** > the **Documents** library of the **Contoso IT Hub** site (name: `Contoso IT policies`).
 
 1. **Tools** > SharePoint **Update item**:
 

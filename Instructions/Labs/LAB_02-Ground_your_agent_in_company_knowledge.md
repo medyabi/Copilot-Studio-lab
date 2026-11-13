@@ -50,8 +50,8 @@ The Service Desk wants the IT Helper to answer policy questions from the officia
 1. Select the **Configure** tab and scroll to **Knowledge**.
 
 1. Select the knowledge box and either:
-   - **Browse** (Attach cloud files) and pick the **IT Policies** folder on the **Contoso IT Hub** site, **or**
-   - paste the folder URL (it must contain the site path, for example `.../sites/ContosoITHub/Shared Documents/IT Policies`, and no query parameters).
+   - **Browse** (Attach cloud files) and pick the four policy files in the **Documents** library of the **Contoso IT Hub** site, **or**
+   - paste the site URL you saved in Lab 00 (`https://<your-tenant>.sharepoint.com/sites/ContosoITHub` - it must contain the site path and no query parameters).
 
 1. Wait until the source no longer shows **Preparing**. You can test while it prepares, but the agent won't use the files until they're ready.
 
@@ -138,7 +138,7 @@ Knowledge without instructions is like giving someone a library card without tel
 
 1. Ask your colleague to run test 1. Do they get the same citation?
 
-> **The permission test.** Agent sharing does **not** share the SharePoint files. If your colleague can't open the IT Policies folder, the agent can't use it for them either. Answers follow the *user's* permissions. That is exactly what you want in a real company.
+> **The permission test.** Agent sharing does **not** share the SharePoint files. If your colleague can't open the Contoso IT Hub documents, the agent can't use it for them either. Answers follow the *user's* permissions. That is exactly what you want in a real company.
 
 ---
 
