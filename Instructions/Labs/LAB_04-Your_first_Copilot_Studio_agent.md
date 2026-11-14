@@ -315,7 +315,11 @@ New agents get them by default. Are they right for **our** agent?
 
    ![Lost laptop: urgent policy steps with citations](media/lab04-25-preview-lost-laptop.png)
 
-   Scroll down. If the agent drafts a ticket, check it says **Hardware / High** - not Security. That's the rule you added in Task 2 after Lab 03's *Spot the mistake*.
+   Scroll down to the **Ticket draft**: **Category: Hardware**, **Priority: High** - not Security. That's the rule you added in Task 2 after Lab 03's *Spot the mistake*.
+
+   ![Ticket draft: Hardware / High](media/lab04-26-lost-laptop-ticket.png)
+
+   > Look at question 3: *"Was this the same morning as the MFA call? ... The two may be linked and should be treated as a security issue."* The agent remembered test 4 **in the same chat** and connected the dots. Smart - but it also shows why you select **New chat** between tests: earlier messages change the answer.
 
 > **Question:** Why bother with the activity trace when the answer looks right?
 > **Answer:** Because "looks right" isn't proof. The trace shows *why* the agent answered - which source, which tool, which query. When something goes wrong in Labs 05-08 (and it will), the trace is the first place you look.
