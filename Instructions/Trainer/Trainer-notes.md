@@ -21,7 +21,7 @@
 
 ## Verify before each delivery (fast-moving features)
 
-These labs were written in **November 2026** against preview features of the GitHub Copilot harness. Do a dry run and check:
+These labs were written in **November 2026** against preview features of the Microsoft Copilot harness. Do a dry run and check:
 
 | Lab | What to check |
 |---|---|

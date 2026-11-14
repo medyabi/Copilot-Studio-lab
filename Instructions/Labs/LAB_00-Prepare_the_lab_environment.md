@@ -32,6 +32,7 @@ Your manager asks you to build agents that help. Step by step.
 - Task 2: Create the Contoso IT Hub SharePoint site
 - Task 3: Upload the Contoso IT policies
 - Task 4: Create the IT Requests list
+- Task 5: Give the environment Copilot Credits (admin)
 
 ---
 
@@ -69,11 +70,11 @@ Why start here? Because 90% of "the lab doesn't work" problems are a missing lic
    > Not sure your environment has Dataverse? Ask your trainer, or check it in the [Power Platform admin center](https://admin.powerplatform.microsoft.com) > **Environments**.
 
 > **Two engines, one studio.** Look at the bottom of the Home page: **Explore what else is possible with agents - Build a standard agent, create an agent flow, or create a Customer Conversation agent.** Copilot Studio runs agents on a **harness** - the runtime between your design and the AI model.
-> - The **GitHub Copilot harness** (behind the **Agent** tile - the default) takes a goal, plans the steps, calls tools, and recovers when something fails.
+> - The **Microsoft Copilot harness** (behind the **Agent** tile - the default) takes a goal, plans the steps, calls tools, and recovers when something fails.
 > - The **standard harness** ("standard agent") follows the topics and paths you draw.
 > - The **Customer Conversation harness** is built for customer-facing voice and chat.
 >
-> We use the **Agent** tile in this course. And don't let the name confuse you: the GitHub Copilot harness is a Copilot Studio runtime. Your data isn't sent to the GitHub Copilot service.
+> We use the **Agent** tile in this course. You may also see the old name, **Microsoft Copilot harness**, in older docs - it was renamed to **Microsoft Copilot harness**. Same runtime, and your data isn't sent to the GitHub Copilot service.
 
 ---
 
@@ -227,6 +228,57 @@ This list is the "inbox" of our Service Desk. In Lab 05 an agent writes into it.
 
 ---
 
+## Task 5: Give the environment Copilot Credits (admin)
+
+> **Who does this?** A Power Platform or global admin - usually the trainer, once, before the course.
+
+Here's a surprise many people hit. You have Microsoft 365 E5 **and** a Microsoft 365 Copilot license. You build an agent from the **Agent** tile, ask it a question in **Preview**... and get this:
+
+![You need credits to continue - EnforcementUsageCredits](media/lab00-20-out-of-credits.png)
+
+**Why?** Agents on the Microsoft Copilot harness are billed **per use, in Copilot Credits** - and billing starts **as soon as you build and test**, not when you publish. Credits belong to the **environment**, not to your user license. Your Copilot license doesn't add any.
+
+The fastest way for a lab: **pay-as-you-go**, billed to an Azure subscription.
+
+1. Open the [Power Platform admin center](https://admin.powerplatform.microsoft.com) > **Licensing** > **Copilot Studio**. Under **Recommendations**, select **+ New billing plan**.
+
+   ![Copilot Studio licensing page with New billing plan](media/lab00-21-ppac-copilot-studio-licensing.png)
+
+1. Fill in the plan:
+
+   | Field | Value |
+   |---|---|
+   | Name | `CopilotLabsPAYG` |
+   | Azure subscription | The subscription that pays for the labs |
+   | Resource group | For example `copilot-credits-rg` |
+   | Meter | **Copilot Studio** only |
+
+   ![New billing plan with only the Copilot Studio meter selected](media/lab00-22-new-billing-plan-meter.png)
+
+   > Untick the other meters (Windows 365 for Agents, Dataverse...). Select only what this plan should pay for.
+
+1. Select **Next**. In **Select environments**, pick the **Region** where your environment lives. The list is **filtered by region** - pick the wrong one and it's empty:
+
+   ![Wrong region: no environments](media/lab00-23-select-env-wrong-region.png)
+
+   Not sure? **Manage** > **Environments** > your environment shows its region. Here it's **Europe**:
+
+   ![Europe: the MTS Team environment appears](media/lab00-24-select-env-europe.png)
+
+1. Tick your lab environment and select **Save**.
+
+1. Go to **Licensing** > **Billing Plans**. Your plan shows **Enabled**, with **Copilot Studio** as the product.
+
+   ![CopilotLabsPAYG enabled](media/lab00-25-billing-plan-enabled.png)
+
+1. Wait 5-10 minutes before testing an agent.
+
+> **Protect your wallet.** Pay-as-you-go has no hard cap. In the Azure portal, open **Cost Management** > **Budgets** and create a budget on the resource group with an e-mail alert. You can unlink the environment from the plan at any time to stop billing.
+
+> **Other options:** prepaid **Copilot Credits capacity** (allocate it to the environment under **Licensing** > **Copilot Studio** > **Manage Copilot Credits**) or a one-year **Copilot Credits prepurchase plan** bought in the Azure portal.
+
+---
+
 ## Check your work
 
 - [ ] You can open **New agent** in Microsoft 365 Copilot.
@@ -234,13 +286,14 @@ This list is the "inbox" of our Service Desk. In Lab 05 an agent writes into it.
 - [ ] The **Contoso IT Hub** site has four policies in its **Documents** library.
 - [ ] You saved the site URL (`.../sites/ContosoITHub`) in a notepad.
 - [ ] The **IT Requests** list exists with seven custom columns and one item.
+- [ ] Your lab environment is linked to an **enabled** billing plan with the Copilot Studio meter.
 
 ## Key takeaways
 
 - Agents are only as good as the data you give them. Clean, short, well-titled documents give better answers.
 - SharePoint keeps permissions. Uploaded files don't.
 - Copilot Studio needs an environment with Dataverse. Find it with the **globe** icon in the left rail.
-- New Copilot Studio agents (the **Agent** tile) run on the GitHub Copilot harness by default.
+- New Copilot Studio agents (the **Agent** tile) run on the Microsoft Copilot harness by default.
 - Exact column names and choice values are a contract between your data and your agents.
 
 **Next:** [Lab 01 - Build your first agent with natural language](LAB_01-Build_your_first_agent_with_Agent_Builder.md)

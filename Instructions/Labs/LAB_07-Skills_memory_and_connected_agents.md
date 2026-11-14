@@ -61,7 +61,7 @@ Remember the `it-ticket-triage` skill from Lab 03? We reuse the **exact same pac
 
 > **Also try:** **Generate with AI**. Describe a skill in one sentence (for example `A skill that writes a polite, two-line closure message for a resolved ticket`) and review what it produces. You can export any skill as Markdown and share it.
 
-> **Built-in skills.** The GitHub Copilot harness already ships skills for reading CSV, Word, PDF, PowerPoint, Excel, HTML and Markdown files. That's why your agent can analyze an attached file without extra setup.
+> **Built-in skills.** The Microsoft Copilot harness already ships skills for reading CSV, Word, PDF, PowerPoint, Excel, HTML and Markdown files. That's why your agent can analyze an attached file without extra setup.
 
 ---
 

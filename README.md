@@ -56,13 +56,13 @@ Lab 09                            Evaluate -> Publish to Teams & M365 Copilot ->
 |---|---|---|
 | Microsoft 365 tenant (E3/E5 or Business Premium) | All | A demo/test tenant is strongly recommended |
 | **Microsoft 365 Copilot** license for each learner | 01-03 | Agent Builder also works with pay-as-you-go, but some knowledge sources (email, Teams chats) need the Copilot license |
-| **Copilot Studio** access (license, trial, or Copilot Credits pay-as-you-go) | 03-09 | Agents on the GitHub Copilot harness consume **Copilot Credits** while you build, test and evaluate |
+| **Copilot Studio** access (license, trial, or Copilot Credits pay-as-you-go) | 03-09 | Agents on the Microsoft Copilot harness consume **Copilot Credits** while you build, test and evaluate |
 | A Power Platform environment **with Dataverse** | 03-09 | Needed to copy agents from Agent Builder and to build in Copilot Studio |
 | SharePoint site you own | 00-08 | Created in Lab 00 |
 | Microsoft Teams | 05, 08, 09 | For notifications and publishing |
 | Global admin or AI admin (trainer only) | 09 | To approve the agent in the Microsoft 365 admin center |
 
-> **Heads-up about the UI.** These labs were written in **November 2026**. Copilot Studio now builds new agents on the **GitHub Copilot harness** by default (Build / Preview / Evaluate tabs). Several features used here (triggers, memory, skills, evaluation) are marked **preview**. Labels can move. When a button isn't where the lab says, look for the same word in the **Build** tab components panel or in **Agent settings**.
+> **Heads-up about the UI.** These labs were written in **November 2026**. Copilot Studio now builds new agents on the **Microsoft Copilot harness** by default (Build / Preview / Evaluate tabs). Several features used here (triggers, memory, skills, evaluation) are marked **preview**. Labels can move. When a button isn't where the lab says, look for the same word in the **Build** tab components panel or in **Agent settings**.
 
 ---
 

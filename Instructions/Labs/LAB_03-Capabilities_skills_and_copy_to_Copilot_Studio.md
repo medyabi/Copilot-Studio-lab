@@ -239,7 +239,7 @@ Time to move up.
 
    ![Copied agent overview - setting up](media/lab03-23-copied-agent-overview.png)
 
-1. Look at the tabs across the top: **Overview, Knowledge, Tools, Agents, Topics, Activity, Evaluation...** This is the **classic Copilot Studio designer** - the **standard harness**, with topics. In Lab 04 you create a new agent from the **Agent** tile on the Home page, which runs on the **GitHub Copilot harness** with a single **Build** tab. Compare the two experiences.
+1. Look at the tabs across the top: **Overview, Knowledge, Tools, Agents, Topics, Activity, Evaluation...** This is the **classic Copilot Studio designer** - the **standard harness**, with topics. In Lab 04 you create a new agent from the **Agent** tile on the Home page, which runs on the **Microsoft Copilot harness** with a single **Build** tab. Compare the two experiences.
 
 > **Important:** a copy is a **snapshot**, not a sync. Changes you make to the Agent Builder version later won't reach the Copilot Studio version, and the other way round. Your original agent keeps working in Microsoft 365 Copilot.
 
