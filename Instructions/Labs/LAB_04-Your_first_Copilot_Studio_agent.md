@@ -311,7 +311,11 @@ New agents get them by default. Are they right for **our** agent?
 
    > Notice the two **Thought process** lines: one before the searches (planning), one after (deciding how to answer). The agent combined the **policy** (knowledge) with your **instructions** (boundary).
 
-1. Run test 5 and check that a lost laptop comes out as **Hardware / High**, not Security.
+1. **Test 5** - the agent gives the urgent policy steps first: report within **4 hours** (ext. 4357 or servicedesk@contoso.com), Intune wipe, replacement in **2 business days**, police report within **48 hours** if stolen - every line cited.
+
+   ![Lost laptop: urgent policy steps with citations](media/lab04-25-preview-lost-laptop.png)
+
+   Scroll down. If the agent drafts a ticket, check it says **Hardware / High** - not Security. That's the rule you added in Task 2 after Lab 03's *Spot the mistake*.
 
 > **Question:** Why bother with the activity trace when the answer looks right?
 > **Answer:** Because "looks right" isn't proof. The trace shows *why* the agent answered - which source, which tool, which query. When something goes wrong in Labs 05-08 (and it will), the trace is the first place you look.
