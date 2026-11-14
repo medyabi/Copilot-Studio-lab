@@ -334,13 +334,22 @@ New agents get them by default. Are they right for **our** agent?
 
 ## Task 8: Read the Review panel
 
-1. Look at the **Review** button in the toolbar. It shows a red badge with a number.
+1. Look at the **Review** button in the toolbar (between the save icon and **Publish**). It shows a shield with a red badge - here **3**.
 
-1. Select **Review**. The panel lists readiness warnings for your agent - for example, that no **evaluation** exists yet.
+1. Select **Review**. The **Review problems** panel opens:
 
-   > 📸 **Screenshot:** `lab04-23-review-panel.png`
+   ![Review problems: three warnings](media/lab04-23-review-panel.png)
 
-1. Read each warning. **Warnings don't block publishing**, but they tell you what a careful maker would do before going live. We clear the evaluation warning in Lab 09.
+   | Warning | What it means | Fixed in |
+   |---|---|---|
+   | **No evaluation run** | Nobody has measured the agent's quality yet. **Evaluate agent** opens the Evaluate tab. | Lab 09 |
+   | **No channel configured** | The agent isn't available to anyone yet - no Teams, no Microsoft 365 Copilot. **Set up channels** opens the channel setup. | Lab 09 |
+   | **Some checks aren't available** | A check couldn't run right now. Refresh the page and look again. | - |
+
+1. **Warnings don't block publishing.** They're a pre-flight checklist: what a careful maker would fix before going live. Leave them for now.
+
+> **Question:** Why not publish now and fix later?
+> **Answer:** Because once users have the agent, every change is a change *in production*. Evaluate first, then open the channel. That's exactly the order of Lab 09.
 
 ---
 
