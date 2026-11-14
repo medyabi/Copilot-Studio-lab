@@ -305,7 +305,13 @@ New agents get them by default. Are they right for **our** agent?
 
    > Notice: the agent didn't ask any questions - it judged that "since yesterday, only me" was enough. That respects "**at most** three questions". If you want it to always confirm the device model first, say so in the instructions.
 
-1. Run tests 4 and 5 and check them against the table.
+1. **Test 4** - the agent searched the Password and MFA Policy, then answered with the **Boundaries** you wrote: *Don't approve it*, **call the Service Desk now on ext. 4357**, and report it as a security incident with priority Critical - with a citation.
+
+   ![MFA prompt: don't approve, call ext. 4357](media/lab04-24-preview-mfa.png)
+
+   > Notice the two **Thought process** lines: one before the searches (planning), one after (deciding how to answer). The agent combined the **policy** (knowledge) with your **instructions** (boundary).
+
+1. Run test 5 and check that a lost laptop comes out as **Hardware / High**, not Security.
 
 > **Question:** Why bother with the activity trace when the answer looks right?
 > **Answer:** Because "looks right" isn't proof. The trace shows *why* the agent answered - which source, which tool, which query. When something goes wrong in Labs 05-08 (and it will), the trace is the first place you look.
