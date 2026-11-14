@@ -30,7 +30,7 @@ These labs were written in **November 2026** against preview features of the Git
 | 05 | MCP custom server dialog fields (Name / Description / Server URL / Authentication) |
 | 06 | Actions placed **after "Respond to the agent"** keep running in your environment (run history shows the approval step). If not, split the approval into a second workflow triggered by the SharePoint item. |
 | 07 | Skill upload in Copilot Studio accepts the `.zip` package (otherwise upload `SKILL.md`) |
-| 07 | Name of the setting that allows other agents to connect |
+| 07 | **Allow other agents to connect** (Settings > AI + behavior) is on by default - confirmed Nov 2026 |
 | 08 | Trigger list (SharePoint **When an item is created**, **Recurrence**), **Start listening** and **Activate for myself** flow |
 | 09 | Evaluate CSV template columns; channel name for Teams + Microsoft 365 Copilot |
 

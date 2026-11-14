@@ -107,7 +107,7 @@ Remember the `it-ticket-triage` skill from Lab 03? We reuse the **exact same pac
 
 1. Test on **Preview**: `How much does a Copilot license cost my cost center?` → EUR 28 per month, manager approval.
 
-1. Open **Agent settings** and make sure other agents are **allowed to connect** to this agent.
+1. Open **...** > **Settings** > **AI + behavior** and check that **Allow other agents to connect** is **on** (it's on by default).
 
 1. Select **Publish**. (A connected agent must be **published** - the parent always uses the latest *published* version.)
 

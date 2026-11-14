@@ -10,11 +10,11 @@ lab:
 
 Welcome to Copilot Studio. Same idea as Agent Builder - instructions, knowledge, capabilities - but with a much bigger toolbox: connectors, MCP servers, workflows, triggers, connected agents, evaluation, channels and environments.
 
-New agents in Copilot Studio run on the **GitHub Copilot harness**. What does that mean for you as a builder?
+In Lab 03 the copy of your agent landed in the **classic** designer (the **standard harness**, with topics). In this lab you create a new agent from the **Agent** tile, which runs on the **GitHub Copilot harness**. What does that mean for you as a builder?
 
 - You don't draw conversation trees. You **describe** the agent and **connect** components.
 - The runtime takes a goal, **plans** the steps, picks the tools and knowledge it needs, and **adapts** when a step fails.
-- Everything you configure lives on one **Build** tab. You test on **Preview** and measure on **Evaluate**.
+- Everything you configure lives on one **Build** page. You test on **Preview**, measure on **Evaluate**, and watch production on **Monitor**.
 
 > **Cost reminder:** agents on this harness use **Copilot Credits** - also while you build, test and evaluate. Keep tests focused.
 
@@ -26,24 +26,44 @@ The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent
 
 ## Job skills
 
-- Task 1: Create the agent and write its instructions
-- Task 2: Add SharePoint knowledge
-- Task 3: Choose the model and review agent settings
-- Task 4: Test on the Preview tab and read the activity trace
+- Task 1: Explore the new Copilot Studio home
+- Task 2: Create the agent and write its instructions
+- Task 3: Add the SharePoint policies as knowledge
+- Task 4: Decide what else the agent may use (web, Work IQ)
+- Task 5: Choose the model
+- Task 6: Configure the agent settings
+- Task 7: Test on the Preview tab and read the activity trace
+- Task 8: Read the Review panel
 
 ---
 
-## Task 1: Create the agent and write its instructions
+## Task 1: Explore the new Copilot Studio home
 
-1. Go to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) and check that the environment you chose in Lab 00 is selected (globe icon in the left rail).
+1. Go to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com). The Home page says *Welcome to the new Copilot Studio*.
 
-1. On **Home**, select the **Agent** tile. (Or **Agents** > **New agent**.) The agent designer opens on the **Build** tab with the name field active.
+   ![Copilot Studio Home page](media/lab04-01-home.png)
+
+   Notice:
+   - The left menu: **Home, Agents, Workflows, Apps (Preview)**.
+   - The environment at the bottom-left (here **MTS Team (default)**). Check that it's the one you chose in Lab 00.
+   - The three tiles: **Agent**, **Workflow**, **App (preview)**, all labelled **Uses Copilot Credits**.
+   - **Last opened** has an **Agent harness** column. Your Lab 03 copy, **Contoso IT Helper (copy)**, shows **Standard**.
+
+1. Select **Agents** in the left menu. Every agent in this environment is listed with its **Status** (Draft / Published), **Owner** and **Agent harness**.
+
+   ![Agents list with the Agent harness column](media/lab04-02-agents-list.png)
+
+---
+
+## Task 2: Create the agent and write its instructions
+
+1. Select **New agent** (or the **Agent** tile on Home). The agent designer opens on the **Build** tab.
 
    > 💡 You can also describe the agent in plain language and let the **agentic builder** (preview) propose a full solution. We build manually here so you see every part.
 
-1. Name the agent `Contoso Service Desk`.
+1. Select the pencil next to the name and type `Contoso Service Desk`.
 
-   > The name you type **before the first save** becomes the agent's internal schema name, which can't be changed later. Get it right now.
+   > The name you have **when you first save** becomes the agent's internal **schema name**, which can't be changed later. Get it right now.
 
 1. In **Instructions**, paste:
 
@@ -65,106 +85,226 @@ The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent
    - Never ask for or repeat passwords, MFA codes or recovery keys.
    - Suspected phishing, an MFA prompt the user did not start, or a data leak:
      Category Security, Priority Critical, tell the user to call ext. 4357 now.
+   - A lost or stolen device is Category Hardware, Priority High.
    - Only IT topics. For HR, finance or legal, politely redirect.
 
    # Style
    Friendly, short sentences, bullet points for lists. Answer in the user's language.
    ```
 
-1. Select **Save**.
+   > Notice the line about lost devices. That's the fix from Lab 03's *Spot the mistake* - we bake it in from the start.
 
-   > 📸 **Screenshot:** `lab04-01-build-tab-instructions.png`
+   ![Build tab with the instructions](media/lab04-03-build-instructions.png)
 
-> **Compare with Lab 01.** These are the same four blocks - role, steps, boundaries, style. In Copilot Studio, **instructions are the main way to control behavior**. There are no topics to fall back on. Clear instructions are everything.
+1. Look at the panel on the right. This is the whole agent on one page:
+
+   | Component | What it does | Lab |
+   |---|---|---|
+   | **Model** | The AI model that reasons and answers | This lab |
+   | **Channels** | Where users talk to the agent (Teams, Microsoft 365 Copilot, web...) | 09 |
+   | **Skills** | Reusable procedures (SKILL.md) | 07 |
+   | **Tools** | Connectors, MCP servers, workflows | 05, 06 |
+   | **Knowledge** | Trusted sources the agent searches | This lab |
+   | **Connected agents** | Other agents this one can delegate to | 07 |
+   | **Memory (Preview)** | Remember user preferences across sessions | 07 |
+
+1. Select the **Save** icon (toolbar, top-right). You see **Your agent has been saved.**
+
+   ![Agent saved](media/lab04-04-agent-saved.png)
+
+> **Compare with Lab 01.** Same four blocks - role, steps, boundaries, style. In this designer, **instructions are the main way to control behavior**. There are no topics to fall back on. Clear instructions are everything.
 
 ---
 
-## Task 2: Add SharePoint knowledge
+## Task 3: Add the SharePoint policies as knowledge
 
-1. On the **Build** tab, in the components panel on the right, select **Knowledge**.
+1. Next to **Knowledge**, select **+**. The **Add knowledge** dialog opens.
 
-1. In **Add knowledge**, choose **SharePoint**.
+   ![Add knowledge dialog](media/lab04-05-add-knowledge.png)
 
-1. Paste the URL of the **Contoso IT Hub** site (`https://<your-tenant>.sharepoint.com/sites/ContosoITHub`) or browse to its **Documents** library, and confirm.
+   Notice the upload area (drag and drop files), the **Featured** sources (**Public websites, SharePoint, OneDrive for Business, Dataverse, Azure SQL**) and the **Advanced** tab for more types.
 
-1. Give the source a clear **name** and **description**. This matters: the runtime reads descriptions to decide when to search a source.
+1. Select **SharePoint**, then **Browse items**. Find the **Contoso IT Hub** site, open **Libraries**, select **Documents** and select **Confirm selection**.
+
+   ![SharePoint picker with the Documents library selected](media/lab04-06-sharepoint-documents.png)
+
+   > Notice: *SharePoint will only be available to authenticated end-users.* The agent searches SharePoint **as the user**, so each person only gets answers from files they can open.
+
+1. The library appears with a default **Name** (Documents) and **Description**. Select **Add to agent**. (We fix the name and description in a moment.)
+
+   ![SharePoint source ready to add](media/lab04-07-sharepoint-add.png)
+
+1. A dialog explains **Understanding Work IQ and SharePoint Knowledge**. Read it, then select **Got it**:
+   - **Work IQ** uses SharePoint and Microsoft 365 data across your organization to personalize answers based on the user's context and activity.
+   - **SharePoint knowledge** focuses the agent on specific sites or libraries - more control.
+
+   ![Understanding Work IQ and SharePoint Knowledge](media/lab04-08-workiq-sharepoint.png)
+
+1. In **Knowledge**, select the new **Documents** chip to edit it. Set:
 
    | Field | Value |
    |---|---|
    | Name | `Contoso IT policies` |
    | Description | `Official Contoso IT policies: laptops and devices, software requests and approval categories, remote access and VPN, passwords and MFA. Use for any question about Contoso IT rules.` |
 
-1. Select **Add** and **Save** the agent.
+   Select **Save**.
 
-> Notice what's **not** there: a "general knowledge" on/off switch. On this harness, you control what the agent knows by the sources you add. Web search is off unless you add **Public websites** and turn on **Search all websites**.
+   ![Edit knowledge source](media/lab04-09-edit-knowledge-source.png)
+
+> **Why rename it?** Look at the instructions: *"answer ONLY from the **Contoso IT policies** knowledge"*. The instructions and the knowledge name now match. And the runtime reads the **description** to decide when to search a source. Names and descriptions are written **for the model**, not for humans.
 
 ---
 
-## Task 3: Choose the model and review agent settings
+## Task 4: Decide what else the agent may use (web, Work IQ)
 
-1. On the **Build** tab, find **Model** and open the list. Note the models your environment offers. Keep the default for now.
+Look at the panel again. You didn't add them, but two components are already there:
 
-   > **Rule of thumb:** a bigger reasoning model for multi-step work with tools; a faster model for high-volume, simple Q&A. You can change it later and measure the impact in Lab 09.
+- **Tools** > **Work IQ**
+- **Knowledge** > **Search all websites**
 
-1. Open **Agent settings** (the gear icon). Browse the four tabs:
+New agents get them by default. Are they right for **our** agent?
 
-   | Tab | What you'll find there |
+1. **Search all websites** - lets the agent use the whole public web. Our instructions say *"answer ONLY from the Contoso IT policies"*. A web answer about "how long Visio takes" would come from some random blog - not from Contoso. Select the **×** on **Search all websites** to remove it.
+
+   > Same decision as in Lab 02, different screen. For a policy agent: **your sources only**.
+
+1. **Work IQ** - grounds answers in the **user's** own Microsoft 365 context (mail, Teams, calendar, files). Useful later ("is my VPN ticket from last week still open?"), and it respects each user's permissions. **Keep it** for now.
+
+   > Work IQ has a consequence you'll see in Task 6: it requires **Authenticate with Microsoft**.
+
+1. **Save** the agent.
+
+   > 📸 **Screenshot:** `lab04-16-knowledge-policies-only.png` - the panel with **Contoso IT policies** and without **Search all websites**.
+
+---
+
+## Task 5: Choose the model
+
+1. At the top of the panel, open **Model** (default: **Auto**).
+
+   ![Model picker](media/lab04-10-model-picker.png)
+
+   The list groups models by purpose:
+
+   | Group | When to use |
    |---|---|
-   | **Agent details** | Primary language, solution, schema name |
-   | **AI & behavior** | Generative AI behavior options |
-   | **Safety & access** | Authentication, content moderation |
-   | **Greeting & prompts** | Welcome message and suggested prompts |
+   | **Auto** (Default) | Copilot Studio picks the right model per request |
+   | **Most powerful at complex tasks** | Long multi-step reasoning with many tools |
+   | **Versatile and highly intelligent** | Strong all-rounders |
+   | **Efficient for everyday tasks** | Fast, cheaper, high-volume Q&A |
 
-1. In **Greeting & prompts**, add three suggested prompts:
+   You'll see models from more than one provider (OpenAI GPT and Anthropic Claude families), plus **More models**.
 
-   - `How long does it take to get Visio?`
-   - `I lost my laptop`
-   - `My VPN shows a red cross`
+1. Keep **Auto** for now.
 
-1. In **Safety & access**, confirm that authentication is **Authenticate with Microsoft**. That's what makes SharePoint answers follow each user's permissions.
-
-1. **Save**.
+   > **Rule of thumb:** a bigger reasoning model for multi-step work with tools; a faster model for high-volume, simple Q&A. Model choice changes both **quality** and **Copilot Credits**. In Lab 09 you'll measure the difference with an evaluation.
 
 ---
 
-## Task 4: Test on the Preview tab and read the activity trace
+## Task 6: Configure the agent settings
+
+1. In the toolbar, select **...** (More). The menu has **Settings**, **Hooks (Preview)**, **Keyboard shortcuts**, **Download** and **Delete agent**. Select **Settings**.
+
+   ![More menu with Settings](media/lab04-11-more-menu.png)
+
+1. The **Agent settings** dialog opens. Read the banner: *Changes to settings take effect after you save and publish the agent.* Browse the tabs:
+
+1. **Agent details** - **Schema name**, **Solution** and **Primary language**. These were set at the first save and can't be changed.
+
+   ![Agent details tab](media/lab04-12-settings-agent-details.png)
+
+1. **AI + behavior**:
+   - **Allow other agents to connect** - **on** by default. Other agents in your organization can invoke this agent as a tool. We use it in Lab 07.
+   - **Moderation level** - how strictly unsafe content is filtered. Keep **Medium**.
+
+   ![AI + behavior tab](media/lab04-13-settings-ai-behavior.png)
+
+1. **Safety & access**:
+   - **Authentication** - **Authenticate with Microsoft**. Notice the message: *No authentication unavailable - Microsoft authentication is required for Work IQ.* That's the consequence of keeping Work IQ in Task 4. It's also what we want: SharePoint answers follow each user's permissions.
+   - **Web channel security** - secrets for the Direct Line API (custom web apps).
+   - **User feedback** - thumbs up/down on each answer. Keep it **on**; you'll see the results on **Monitor**.
+
+   ![Safety & access tab](media/lab04-14-settings-safety.png)
+
+1. **Greeting & prompts**:
+   - **Greeting message:**
+
+     ```text
+     Hi! I'm the Contoso Service Desk agent. Ask me about IT policies, or tell me what's broken and I'll help you prepare a ticket.
+     ```
+
+   - **Suggested prompts** - each prompt needs a **title** and a **message**. Select **+ Add a suggested prompt** three times:
+
+     | Title | Message |
+     |---|---|
+     | `Visio request` | `How long does it take to get Visio?` |
+     | `Lost laptop` | `I lost my laptop` |
+     | `VPN problem` | `My VPN shows a red cross` |
+
+   ![Greeting message and three suggested prompts](media/lab04-15-settings-greeting-prompts.png)
+
+1. The last tab, **Advanced**, holds settings we don't need today. Select **Done**, then **Save** the agent.
+
+   > Settings take effect after **save and publish**. If the greeting and prompts don't appear in **Preview** yet, that's expected - you'll see them after publishing in Lab 09.
+
+---
+
+## Task 7: Test on the Preview tab and read the activity trace
 
 1. Select the **Preview** tab.
 
-1. Run these tests:
+1. Run these tests. Start a new conversation between tests.
 
    | # | Message | Look for |
    |---|---|---|
-   | 1 | `How long does it take to get Visio?` | Category B, manager approval, 2 business days + citation |
-   | 2 | `Global Secure Access shows a red cross` | The troubleshooting checklist from the VPN guide |
-   | 3 | `My screen flickers since yesterday, only me` | Max 3 questions, then a ticket with Category Hardware, Priority Normal |
+   | 1 | `How long does it take to get Visio?` | Category B, manager approval, 2 business days + citation to the Software Request Policy |
+   | 2 | `Global Secure Access shows a red cross` | The troubleshooting checklist from the Remote Access guide |
+   | 3 | `My screen flickers since yesterday, only me` | Max 3 questions, then a ticket: Hardware / Normal |
    | 4 | `Someone called me and asked me to approve an MFA prompt` | Security / Critical / call ext. 4357 |
+   | 5 | `I left my laptop in a taxi` | Hardware / **High** (not Security) |
+
+   > 📸 **Screenshot:** `lab04-17-preview-visio.png` - test 1 with its citation.
 
 1. After test 1, open the **activity trace** (the agent's step-by-step view). Find:
    - the **plan** the agent made,
-   - the **knowledge search** it ran and the query it used,
+   - the **knowledge search** on **Contoso IT policies** and the query it used,
    - the documents it found.
 
-   > 📸 **Screenshot:** `lab04-02-activity-trace.png`
+   > 📸 **Screenshot:** `lab04-18-activity-trace.png`
 
 > **Question:** Why bother with the activity trace when the answer looks right?
-> **Answer:** Because "looks right" isn't proof. The trace shows *why* the agent answered - which source, which tool, which inputs. When something goes wrong in Lab 05-08 (and it will), the trace is the first place you look.
+> **Answer:** Because "looks right" isn't proof. The trace shows *why* the agent answered - which source, which tool, which inputs. When something goes wrong in Labs 05-08 (and it will), the trace is the first place you look.
 
-1. Optional: open the copy of **Contoso IT Helper** you made in Lab 03 and ask it test 1. Compare the answers and the traces.
+1. Optional: open **Contoso IT Helper (copy)** from Lab 03 (standard harness) and ask it test 1. Compare the designer, the answer and the test panel.
+
+---
+
+## Task 8: Read the Review panel
+
+1. Look at the **Review** button in the toolbar. It shows a red badge with a number.
+
+1. Select **Review**. The panel lists readiness warnings for your agent - for example, that no **evaluation** exists yet.
+
+   > 📸 **Screenshot:** `lab04-19-review-panel.png`
+
+1. Read each warning. **Warnings don't block publishing**, but they tell you what a careful maker would do before going live. We clear the evaluation warning in Lab 09.
 
 ---
 
 ## Check your work
 
-- [ ] **Contoso Service Desk** exists, with instructions and the SharePoint knowledge source.
-- [ ] Three suggested prompts are configured.
-- [ ] You can explain what the activity trace shows for a knowledge question.
+- [ ] **Contoso Service Desk** exists with the instructions and the **Contoso IT policies** knowledge source.
+- [ ] **Search all websites** is removed; **Work IQ** is kept and authentication is **Authenticate with Microsoft**.
+- [ ] Greeting message and three suggested prompts (title + message) are configured.
+- [ ] Test 5 returns Hardware / High, and you can explain what the activity trace shows for test 1.
 
 ## Key takeaways
 
-- New Copilot Studio agents run on the GitHub Copilot harness: describe, connect, let the runtime plan.
-- **Names and descriptions** of knowledge (and later tools and agents) drive the runtime's choices. Write them for the model, not for humans.
-- The **Preview** tab + **activity trace** is your debugger.
+- The **Agent** tile creates agents on the GitHub Copilot harness: one **Build** page, then **Preview / Evaluate / Monitor**.
+- **Names and descriptions** of knowledge (and later tools and agents) drive the runtime's choices. Write them for the model.
+- New agents come with **Search all websites** and **Work IQ**. Keep only what the agent's job needs.
+- Agent **Settings** hide important choices: authentication, connections from other agents, greeting and prompts. They apply after **save and publish**.
+- The **Preview** tab + **activity trace** is your debugger. **Review** is your pre-flight checklist.
 - Building and testing consume Copilot Credits. Test with purpose.
 
 **Next:** [Lab 05 - Give your agent hands: connectors and MCP tools](LAB_05-Connectors_and_MCP_tools.md)
