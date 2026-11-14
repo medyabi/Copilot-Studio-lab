@@ -74,7 +74,7 @@ Why start here? Because 90% of "the lab doesn't work" problems are a missing lic
 > - The **standard harness** ("standard agent") follows the topics and paths you draw.
 > - The **Customer Conversation harness** is built for customer-facing voice and chat.
 >
-> We use the **Agent** tile in this course. You may also see the old name, **Microsoft Copilot harness**, in older docs - it was renamed to **Microsoft Copilot harness**. Same runtime, and your data isn't sent to the GitHub Copilot service.
+> We use the **Agent** tile in this course. You may also see the old name, **GitHub Copilot harness**, in older docs - it was renamed to **Microsoft Copilot harness**. Same runtime, and your data isn't sent to the GitHub Copilot service.
 
 ---
 
