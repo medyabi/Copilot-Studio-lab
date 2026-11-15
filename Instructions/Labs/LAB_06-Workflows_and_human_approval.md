@@ -37,6 +37,40 @@ Category B software (Visio, Project, Power BI Pro, Acrobat Pro) needs **manager 
 
 ---
 
+## Before you start: how to fill a field in the workflow designer
+
+Every field in a workflow node can hold two kinds of content:
+
+| Content | What it looks like | How you add it |
+|---|---|---|
+| **Text you type** | Plain black text | Type it on the keyboard |
+| **A value from an earlier step** | A blue **chip** with an **×** - for example `SoftwareName ×` | Select the **⚡** icon at the right of the field, pick the step (for example **When an agent calls the flow**), then pick the value |
+
+In this lab we write fields like this:
+
+> `Software request: ` **[⚡ Trigger › SoftwareName]**
+
+That means: **type** `Software request: ` (with the space), **then insert the chip** SoftwareName with ⚡. Nothing else. Never type the `+`, the brackets or the word "Trigger".
+
+### The three golden rules
+
+1. **Chips are never typed.** If you type the word `SoftwareName`, the field contains the word "SoftwareName" - not the software name. Always use **⚡**.
+2. **Some fields accept text + chips, some accept ONLY a chip.**
+
+   | Field type | Examples | Allowed content |
+   |---|---|---|
+   | **Free text** | Title, Description, Details, Message | Text **and** chips, mixed |
+   | **Email / person** | Assigned to, Requestor, To, User (UPN) | **One chip only** - no text before or after |
+   | **ID / number** | Id, RequestID, Top Count | **One chip only** (or a fixed number) |
+
+   > ⚠️ Typing a label like `Requester: ` or `manager's ` in front of an email chip produces `Requester: alex@contoso.com` - an invalid address. The step fails at run time, not at save time. That's what makes this mistake sneaky.
+
+3. **Check the chip's source.** Hover over a chip to see which step it comes from. *Display Name* from **Get manager** is the manager; *Display Name* from another step is someone else.
+
+> 💡 **Quick check before you save:** read each email / ID field. If you see any black text next to the chip, delete it.
+
+---
+
 ## Task 1: Create the workflow from the agent
 
 1. Open **Contoso Service Desk** > **Build** tab > **Tools**.
