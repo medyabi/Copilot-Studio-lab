@@ -69,10 +69,6 @@ That means: **type** `Software request: ` (with the space), **then insert the ch
 
 1. **Chips are never typed.** If you type the word `RequesterEmail`, the field contains the word "RequesterEmail", not the email. Always use **⚡**.
 
-   > 🔍 **Real error from this lab:** User (UPN) in *Get manager* held typed text instead of a chip. The run failed with:
-   > `Action 'Get_manager' failed. Resource ' RequesterEmail' does not exist`
-   > Office 365 looked for a user literally called " RequesterEmail" (with a leading space!).
-
 2. **Some fields accept text + chips. Others accept ONLY a chip.**
 
    | Field type | Examples | Allowed content |
@@ -432,8 +428,6 @@ That's why Task 4 added the "never use Create IT request" lines.
 | Email reads *"forMicrosoft Visiowas approved"* | No spaces around the chip | Golden rule #4 |
 | The workflow isn't in the **Add a tool** list | Not published, or wrong trigger | Publish; the trigger must be *When an agent calls the workflow* |
 | You picked a Nintex/Datablend "workflow" | Searched instead of using **Add > Workflow** | Remove it; use **Add > Workflow** |
-
-![Manager without a mailbox](media/lab06-42-no-mailbox.png)
 
 ---
 
