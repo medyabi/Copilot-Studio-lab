@@ -14,6 +14,7 @@
 - [ ] Assign **Microsoft 365 Copilot** licenses to every learner account (Labs 01-03).
 - [ ] Give every learner Copilot Studio access and a **Dataverse environment** (one shared "Agents-Lab" environment or one developer environment each). Check **Copilot Credits** capacity - building, testing, evaluating and autonomous runs all consume credits.
 - [ ] Set a **manager** in Entra ID for each learner account (Lab 06 approval). Simplest: make the trainer account everyone's manager.
+- [ ] Make sure that manager has a **license with Exchange Online** (a mailbox). An unlicensed manager receives the approval but Outlook fails with `OwaUserHasNoMailboxAndNoLicenseAssignedException`. A new mailbox takes 5-30 minutes to appear.
 - [ ] Check the Power Platform **data policy** of the lab environment allows: SharePoint, Office 365 Outlook, Office 365 Users, Approvals, Microsoft Teams, and custom MCP servers (Lab 05).
 - [ ] Check **Knowledge sources for agents** allows SharePoint and file upload.
 - [ ] Make sure Restricted SharePoint Search is **off** in the lab tenant (it blocks SharePoint knowledge in Agent Builder).
@@ -28,7 +29,8 @@ These labs were written in **November 2026** against preview features of the Mic
 | 03 | Skills in Agent Builder: still under **Configure > Skills > Add**; zip limits (8 skills, 50 MB) |
 | 03 | **Copy to Copilot Studio** lands in the classic designer (standard harness) - confirmed Nov 2026; skills are not copied |
 | 05 | MCP custom server dialog fields (Name / Description / Server URL / Authentication) |
-| 06 | Actions placed **after "Respond to the agent"** keep running in your environment (run history shows the approval step). If not, split the approval into a second workflow triggered by the SharePoint item. |
+| 06 | Actions placed **after "Respond to the agent"** keep running - confirmed Nov 2026 (Activity tab shows the approval step, 1m40s, then the If branch). |
+| 06 | The **▷ Test** button is unavailable for agent-triggered workflows - test from the agent, debug in **Activity** / **Run node** |
 | 07 | Skill upload in Copilot Studio accepts the `.zip` package (otherwise upload `SKILL.md`) |
 | 07 | **Allow other agents to connect** (Settings > AI + behavior) is on by default - confirmed Nov 2026 |
 | 08 | Trigger list (SharePoint **When an item is created**, **Recurrence**), **Start listening** and **Activate for myself** flow |
@@ -46,6 +48,11 @@ These labs were written in **November 2026** against preview features of the Mic
 | Workflow tool times out | Approval placed before **Respond to the agent** | Respond first (100-second limit) |
 | Connected agent missing | Not published, not allowed to connect, different environment | Publish and enable connections |
 | Autonomous agent doesn't run | Not published, or not activated in **Agent management** | Publish, then activate |
+| Workflow fails: `Resource ' RequesterEmail' does not exist` | Learner **typed** the input name instead of inserting the chip | Golden rule #1 in Lab 06: delete the text, insert the ⚡ chip, publish again |
+| Approval never sent / invalid address | Text in front of an email chip (`manager's Mail`, `Requester: RequesterEmail`) | Email fields take **one chip only** |
+| Agent created a normal IT request with Status New, no approval | **Bypass**: workflow failed, orchestrator used Create IT request | Fix the workflow; add the "never use Create IT request for software" instruction + tool description. Great discussion point: instructions are not guardrails |
+| Learner picked a Nintex/Datablend "workflow" | Searched "workflow" in Add a tool | Use **Add > Workflow** |
+| Email reads "forMicrosoft Visiowas approved" | No spaces around the chip in Body | Add a space each side |
 | Trigger fires in a loop | "Created **or modified**" trigger + agent updates the item | Use "When an item is created" |
 
 ## Discussion questions (use between labs)
