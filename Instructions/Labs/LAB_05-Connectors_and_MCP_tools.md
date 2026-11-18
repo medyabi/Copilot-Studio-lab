@@ -26,6 +26,8 @@ Here's the key idea: **you don't wire the tools together**. You give each tool a
 
 Employees keep asking the Service Desk agent to "just open the ticket for me". The manager agrees, with rules: the agent creates the item in the **IT Requests** list only after the user confirms, sends the user a confirmation email, and can look up the status of existing requests. Engineers also want technical "how do I..." answers from **official Microsoft documentation**.
 
+> 👥 **Working as a team?** Add your **initials** to everything you create in this lab (for example `Contoso Service Desk - MD`), and always pick **your own** list, `IT Requests - XX`, from Lab 00 Task 6. Working alone? Skip the suffix and use `IT Requests`.
+
 ## Job skills
 
 - Task 1: Add the SharePoint "Create item" tool
@@ -93,7 +95,7 @@ In **Tool details**, every input has two modes:
    | Input | Mode | Value |
    |---|---|---|
    | **Site Address** | **Custom** | Contoso IT Hub - `https://<your-tenant>.sharepoint.com/sites/ContosoITHub` |
-   | **List Name** | **Custom** | `IT Requests` (pick it from the list) |
+   | **List Name** | **Custom** | `IT Requests` (team: **your** `IT Requests - XX`), picked from the list |
 
    ![Site Address and List Name set to Custom](media/lab05-06-site-list-custom.png)
 
@@ -120,7 +122,7 @@ In **Tool details**, every input has two modes:
    | Name (✏️) | `Find my IT requests` |
    | Description for AI (✏️) | `Returns existing IT requests from the Contoso IT Requests list. Use it when the user asks about the status of their requests. Return Title, Status, Priority and AssignedTeam only.` |
    | Site Address | **Custom** - Contoso IT Hub |
-   | List Name | **Custom** - **IT Requests** |
+   | List Name | **Custom** - **IT Requests** (team: **IT Requests - XX**) |
    | Top Count (Advanced parameters) | **Custom** - `10` |
 
    ![Get items with its description](media/lab05-10-get-items-description.png)
@@ -265,7 +267,7 @@ The Microsoft Learn MCP server is a free, public, no-authentication MCP server t
 
    ![Request created and email sent](media/lab05-28-created-and-emailed.png)
 
-1. Check SharePoint: the item is in **IT Requests** with Category **Hardware**, Priority **Normal**, Status **New** - and a clean description that includes your answers.
+1. Check SharePoint: the item is in **IT Requests** (team: **IT Requests - XX**) with Category **Hardware**, Priority **Normal**, Status **New** - and a clean description that includes your answers.
 
    ![The new item in the IT Requests list](media/lab05-29-sharepoint-item.png)
 
@@ -285,7 +287,7 @@ In our first run, **Find my IT requests** still had **List Name = "Find my IT re
 
    ![The agent explains the misconfiguration](media/lab05-32-agent-explains-error.png)
 
-1. **The fix:** **Build** > select **Find my IT requests** > **List Name** > **Custom** > pick **IT Requests** from the list > **Done** > **Save**.
+1. **The fix:** **Build** > select **Find my IT requests** > **List Name** > **Custom** > pick **IT Requests** (team: **IT Requests - XX**) from the list > **Done** > **Save**.
 
 > **🔍 Lesson:** a red line in the trace + "404" almost always means a wrong **fixed value** (site, list, ID). Expand the failed step, read the error, fix the input. That's why we keep **Debug mode** on while building.
 

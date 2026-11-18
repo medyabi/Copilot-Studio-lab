@@ -28,6 +28,8 @@ The Service Desk manager has three requests:
 2. "Users hate repeating that they're in Dubai or that they want answers in French."
 3. "The licensing team built their own agent. Don't copy their knowledge. **Ask their agent**."
 
+> 👥 **Working as a team?** Add your **initials** to everything you create in this lab (for example `Contoso License Advisor - MD`), and always pick **your own** list, `IT Requests - XX`, from Lab 00 Task 6. Working alone? Skip the suffix and use `IT Requests`.
+
 ## Job skills
 
 - Task 1: Add the triage skill to the Service Desk agent
@@ -201,7 +203,7 @@ Uploading is great when the skill already exists. Now you write one yourself.
 
 ## Task 4: Build and publish the License Advisor agent
 
-1. Go to **Agents** > **New agent**. Name it `Contoso License Advisor`.
+1. Go to **Agents** > **New agent**. Name it `Contoso License Advisor` (team: `Contoso License Advisor - XX`).
 
 1. **Instructions**:
 
@@ -246,7 +248,7 @@ Uploading is great when the skill already exists. Now you write one yourself.
 
    ![Add a connected agent](media/lab07-22-connected-agent-list.png)
 
-1. Select **Contoso License Advisor**. Write the **Description**. The parent reads it to decide **when to delegate**, the same way it reads tool descriptions:
+1. Select **Contoso License Advisor** (team: **yours**, with your initials; the list also shows your teammates' agents). Write the **Description**. The parent reads it to decide **when to delegate**, the same way it reads tool descriptions:
 
    ```text
    Specialist for Microsoft license questions at Contoso: which licenses exist, eligibility, approval rules and the monthly charge to a cost center. Delegate any question about license cost, eligibility or license reclaim.

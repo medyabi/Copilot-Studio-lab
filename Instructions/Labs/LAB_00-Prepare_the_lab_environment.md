@@ -26,6 +26,24 @@ You work for **Contoso**, a company with offices in Casablanca, Paris, Madrid, D
 
 Your manager asks you to build agents that help. Step by step.
 
+## Working alone or as a team?
+
+These labs work for one person, or for a whole team sharing one tenant and one Copilot Studio environment.
+
+| Who | Does what |
+|---|---|
+| **Trainer**, once, before the session | Tasks 2-5: the site, the policies, the **IT Requests** template list, the billing plan. Also sets **themself as everyone's manager** in Entra ID (Lab 06 approvals). |
+| **Each learner** | Task 1 (check access) and **Task 6** (create your own list). |
+| **One person on their own** | Tasks 1-5. Skip Task 6. |
+
+Why one list per learner? Think of the **IT Requests** list as a whiteboard. One person writing on it is fine. Eight people writing on it at the same time, and erasing each other's work, is chaos. That's what happens in Lab 08: every learner's autonomous agent would react to **every** new item, triage it and overwrite the others.
+
+The rule for a team is simple:
+
+- **Share** the site and the **Documents** library. Agents only *read* them.
+- **Own** your list: `IT Requests - XX`, where XX is your initials.
+- **Name** everything you build with your initials: `Contoso Service Desk - XX`, `Contoso License Advisor - XX`, `Request software approval - XX`, `Contoso Triage Agent - XX`. Otherwise, in Lab 07 you'll see eight agents called "Contoso License Advisor" and pick the wrong one.
+
 ## Job skills
 
 - Task 1: Check your access and pick your Copilot Studio environment
@@ -33,6 +51,7 @@ Your manager asks you to build agents that help. Step by step.
 - Task 3: Upload the Contoso IT policies
 - Task 4: Create the IT Requests list
 - Task 5: Give the environment Copilot Credits (admin)
+- Task 6: Create your own IT Requests list (team only)
 
 ---
 
@@ -279,6 +298,26 @@ The fastest way for a lab: **pay-as-you-go**, billed to an Azure subscription.
 
 ---
 
+## Task 6: Create your own IT Requests list (team only)
+
+Skip this task if you work alone.
+
+1. Open the **Contoso IT Hub** site. On **Home**, select **+ New** > **List**.
+
+1. Under **Create from**, select **From existing list**.
+
+1. Pick the **Contoso IT Hub** site, select the **IT Requests** list, and select **Next**.
+
+   This copies the **columns, the choices and the default values**, not the items. One click instead of seven columns.
+
+1. Name it `IT Requests - XX` with **your initials** (for example `IT Requests - MD`). Keep **Show list in site navigation** checked and select **Create**.
+
+1. Add one test item (**+ New**): Title `Docking station not detected`, Category **Hardware**. Check that **Priority** shows **Normal** and **Status** shows **New** without you touching them: the defaults came with the copy.
+
+> 💡 From now on, every time a lab says **IT Requests**, you pick **IT Requests - XX**: in the Lab 05 tools, the Lab 06 workflow and the Lab 08 trigger and tools.
+
+---
+
 ## Check your work
 
 - [ ] You can open **New agent** in Microsoft 365 Copilot.
@@ -286,6 +325,7 @@ The fastest way for a lab: **pay-as-you-go**, billed to an Azure subscription.
 - [ ] The **Contoso IT Hub** site has four policies in its **Documents** library.
 - [ ] You saved the site URL (`.../sites/ContosoITHub`) in a notepad.
 - [ ] The **IT Requests** list exists with seven custom columns and one item.
+- [ ] Team only: your **IT Requests - XX** list exists, with one item.
 - [ ] Your lab environment is linked to an **enabled** billing plan with the Copilot Studio meter.
 
 ## Key takeaways

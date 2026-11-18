@@ -24,6 +24,8 @@ This lab is the bridge between a demo and a service.
 
 The Service Desk manager wants to roll out **Contoso Service Desk** in Teams and Microsoft 365 Copilot. The CISO wants proof that it behaves, and the IT admin wants to approve it before anyone sees it in the Agent Store.
 
+> 👥 **Working as a team?** Only one agent per team should go all the way to the **organization catalog**: agree on one (for example the trainer's), otherwise the admin center fills up with eight copies of "Contoso Service Desk".
+
 ## Job skills
 
 - Task 1: Create and run an evaluation

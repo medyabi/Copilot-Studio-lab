@@ -27,13 +27,15 @@ And the approval? That's our first real **human in the loop**. A person decides,
 
 Category B software (Visio, Project, Power BI Pro, Acrobat Pro) needs **manager approval**. The Service Desk wants the agent to collect the request and hand it to a workflow. The workflow logs the request, asks the manager to approve it in Outlook or Teams, and updates the request when the manager decides.
 
+> 👥 **Working as a team?** Add your **initials** to everything you create in this lab (for example `Request software approval - MD`), and always pick **your own** list, `IT Requests - XX`, from Lab 00 Task 6. Working alone? Skip the suffix and use `IT Requests`.
+
 ## Before you begin
 
 > ⚠️ **Your account needs a manager, and that manager needs a mailbox.**
 >
 > The workflow looks up your manager in Microsoft Entra ID and sends them the approval. Check two things in the [Microsoft 365 admin center](https://admin.microsoft.com) > **Users** > **Active users**:
 >
-> 1. Your lab account > **Account** tab > **Manager** is set (in this lab: *Julian Duncan*).
+> 1. Your lab account > **Account** tab > **Manager** is set (in this lab: *Julian Duncan*). **In a team session, the trainer is everyone's manager**, so every approval lands in the trainer's inbox and is approved live in class.
 > 2. The manager's account has a **license with Exchange Online** (**Mail** tab shows mailbox storage).
 >
 > No manager? The **Get manager** step fails. Manager without a mailbox? The approval is created, but nobody can open it. See [Troubleshooting](#troubleshooting) at the end.
@@ -148,7 +150,7 @@ That means: **type** `Software request: ` (with the space), **then insert the ch
 
    ![SharePoint Create item](media/lab06-09-sharepoint-create-item.png)
 
-1. Site address = **Contoso IT Hub**, List name = **IT Requests**. Fill the item:
+1. Site address = **Contoso IT Hub**, List name = **IT Requests** (team: **IT Requests - XX**). Fill the item:
 
    | Field | Type | Value |
    |---|---|---|
@@ -226,7 +228,7 @@ Everything in this task goes **after** Respond to the agent.
 
 ### Update the request
 
-1. In the **If** branch, add **SharePoint** > **Update item**: same site and list, **Id** = **[⚡ Create item › ID]** (one chip), **Status** = **Approved**.
+1. In the **If** branch, add **SharePoint** > **Update item**: same site and list (team: **your** list), **Id** = **[⚡ Create item › ID]** (one chip), **Status** = **Approved**.
 
    ![Update item - Approved](media/lab06-18-update-approved.png)
 
@@ -271,7 +273,7 @@ Everything in this task goes **after** Respond to the agent.
 
 ## Task 4: Publish the workflow and add it to the agent
 
-1. Rename the workflow: select **Untitled workflow** at the top and type `Request software approval`.
+1. Rename the workflow: select **Untitled workflow** at the top and type `Request software approval` (team: `Request software approval - XX`).
 
 1. Select **Publish**. Wait for the badge to change from **Draft** to **Published**.
 
@@ -347,7 +349,7 @@ Everything in this task goes **after** Respond to the agent.
 
    ![Request submitted](media/lab06-32-request-submitted.png)
 
-1. Open the **IT Requests** list. Your item shows **Status = Waiting for approval**.
+1. Open the **IT Requests** list (team: yours). Your item shows **Status = Waiting for approval**.
 
    ![Item waiting for approval](media/lab06-33-item-waiting.png)
 

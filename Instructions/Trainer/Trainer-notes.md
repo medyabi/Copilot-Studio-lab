@@ -13,12 +13,24 @@
 
 - [ ] Assign **Microsoft 365 Copilot** licenses to every learner account (Labs 01-03).
 - [ ] Give every learner Copilot Studio access and a **Dataverse environment** (one shared "Agents-Lab" environment or one developer environment each). Check **Copilot Credits** capacity - building, testing, evaluating and autonomous runs all consume credits.
-- [ ] Set a **manager** in Entra ID for each learner account (Lab 06 approval). Simplest: make the trainer account everyone's manager.
+- [ ] Set a **manager** in Entra ID for each learner account (Lab 06 approval). Make the **trainer account everyone's manager**: every approval lands in your inbox and you approve them live in class (a good demo moment).
 - [ ] Make sure that manager has a **license with Exchange Online** (a mailbox). An unlicensed manager receives the approval but Outlook fails with `OwaUserHasNoMailboxAndNoLicenseAssignedException`. A new mailbox takes 5-30 minutes to appear.
 - [ ] Check the Power Platform **data policy** of the lab environment allows: SharePoint, Office 365 Outlook, Office 365 Users, Approvals, Microsoft Teams, and custom MCP servers (Lab 05).
 - [ ] Check **Knowledge sources for agents** allows SharePoint and file upload.
 - [ ] Make sure Restricted SharePoint Search is **off** in the lab tenant (it blocks SharePoint knowledge in Agent Builder).
 - [ ] Optional: pre-create the Contoso IT Hub site and list for the half-day track.
+
+## Running the labs with a team (shared tenant and environment)
+
+One site, one environment, one list **per learner**. Do this before the session:
+
+- [ ] Build the **Contoso IT Hub** site, upload the 4 policies and create the **IT Requests** template list yourself (Lab 00 Tasks 2-4). Learners don't repeat them.
+- [ ] Learners only do Lab 00 **Task 1** and **Task 6** (create `IT Requests - XX` from the existing list).
+- [ ] Give every learner at least **Edit** on the site (they create a list and items) and Copilot Studio **maker** access in the environment.
+- [ ] Announce the naming rule: initials on every agent, workflow and list (`Contoso Service Desk - XX`, `Contoso License Advisor - XX`, `Request software approval - XX`, `Contoso Triage Agent - XX`).
+- [ ] Credits: all learners draw from the same environment. Set an Azure **budget alert** on the pay-as-you-go plan, and keep an eye on Lab 08 (autonomous runs).
+- [ ] Lab 08: check every trigger points to the learner's **own** list. A trigger on the shared template list fires every learner's agent on every item.
+- [ ] After the session: deactivate the Lab 08 agents (**Agent management**), unpublish or delete the learners' agents and workflows, and delete the `IT Requests - XX` lists.
 
 ## Verify before each delivery (fast-moving features)
 
@@ -56,6 +68,8 @@ These labs were written in **November 2026** against preview features of the Mic
 | Email reads "forMicrosoft Visiowas approved" | No spaces around the chip in Body | Add a space each side |
 | Closure skill not used, "no ticket found" | The agent checked Find my IT requests first and the ticket doesn't exist | Expected (grounded). Test with a real ticket number |
 | Memory test answers in English | Memory off, not saved, or same conversation | Save, then **New chat** |
+| Several Teams alerts / triage values change on their own | Learners' triggers point to the **shared** list | Each trigger and tool must use the learner's own `IT Requests - XX` |
+| Learner connected someone else's License Advisor | No initials in agent names | Rename with initials; reconnect |
 | Trigger fires in a loop | "Created **or modified**" trigger + agent updates the item | Use "When an item is created" |
 
 ## Discussion questions (use between labs)

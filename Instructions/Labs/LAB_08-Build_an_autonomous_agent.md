@@ -29,6 +29,10 @@ New requests land in the **IT Requests** list all day - from the agent, from the
 
 You build the **Contoso Triage Agent**: whenever a new request is created, it triages it with the official rules, writes the result back to the list, and alerts the on-call engineer in Teams for anything Critical. Every morning it also posts a short digest of the open queue.
 
+> 👥 **Working as a team?** Add your **initials** to everything you create in this lab (for example `Contoso Triage Agent - MD`), and always pick **your own** list, `IT Requests - XX`, from Lab 00 Task 6. Working alone? Skip the suffix and use `IT Requests`.
+
+> ⚠️ **In a team, this lab is where a shared list really breaks.** A trigger on the shared **IT Requests** list fires for **every learner's agent** on **every** new item: several agents triage the same request, overwrite each other and send several Teams alerts. Point your trigger and your tools at **your own** list only.
+
 ## Job skills
 
 - Task 1: Design the guardrails first
@@ -59,7 +63,7 @@ Before clicking anything, answer five questions. Write the answers down - your t
 
 ## Task 2: Create the agent, skill, knowledge and tools
 
-1. **Agents** > **New agent**. Name: `Contoso Triage Agent`.
+1. **Agents** > **New agent**. Name: `Contoso Triage Agent` (team: `Contoso Triage Agent - XX`).
 
 1. **Instructions**:
 
@@ -101,7 +105,7 @@ Before clicking anything, answer five questions. Write the answers down - your t
    |---|---|
    | Name | `Update triaged request` |
    | Description | `Writes the triage result to an existing item in the IT Requests list. Inputs: Id, Category, Priority, AssignedTeam, Status, TriageNotes.` |
-   | Site Address / List Name | **Fixed**: Contoso IT Hub / IT Requests |
+   | Site Address / List Name | **Fixed**: Contoso IT Hub / IT Requests (team: **IT Requests - XX**) |
    | Title, Description | **Do not expose** to the agent (leave them out or fixed to their current value) |
 
    > ⚠️ Check the column inputs carefully. The fewer fields the agent can write, the smaller the blast radius.
@@ -136,7 +140,7 @@ Before clicking anything, answer five questions. Write the answers down - your t
 
 1. Check the **connection** shows a green check mark.
 
-1. Configure **Trigger options**: Site Address = Contoso IT Hub, List Name = IT Requests.
+1. Configure **Trigger options**: Site Address = Contoso IT Hub, List Name = IT Requests (team: **IT Requests - XX**).
 
 1. In the extra **instructions** for this trigger, type:
 
@@ -176,7 +180,7 @@ Before clicking anything, answer five questions. Write the answers down - your t
 
 1. Select **Start listening**.
 
-1. In another tab, add an item to **IT Requests**:
+1. In another tab, add an item to **IT Requests** (team: **your** list):
 
    | Title | Description |
    |---|---|

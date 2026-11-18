@@ -24,6 +24,8 @@ In Lab 03 the copy of your agent landed in the **classic** designer (the **stand
 
 The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent. In this lab it does what the IT Helper did (answer from policies, write ticket summaries). From Lab 05 it starts taking action.
 
+> 👥 **Working as a team?** Add your **initials** to everything you create in this lab (for example `Contoso Service Desk - MD`), and always pick **your own** list, `IT Requests - XX`, from Lab 00 Task 6. Working alone? Skip the suffix and use `IT Requests`.
+
 ## Job skills
 
 - Task 1: Explore the new Copilot Studio home
@@ -65,7 +67,7 @@ The Service Desk is ready for a "real" agent: the **Contoso Service Desk** agent
 
    > 💡 You can also describe the agent in plain language and let the **agentic builder** (preview) propose a full solution. We build manually here so you see every part.
 
-1. Select the pencil next to the name and type `Contoso Service Desk`.
+1. Select the pencil next to the name and type `Contoso Service Desk` (team: `Contoso Service Desk - XX`).
 
    > The name you have **when you first save** becomes the agent's internal **schema name**, which can't be changed later. Get it right now.
 
