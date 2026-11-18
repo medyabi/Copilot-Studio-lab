@@ -10,13 +10,13 @@ lab:
 
 Before we build anything, we need a place for our agents to live and some data for them to work with.
 
-Think of it like a kitchen. Before you cook, you check the oven works and you put the ingredients on the counter. That's this lab. No agents yet - just the **ingredients**:
+No agents yet. In this lab you set up the **foundations**:
 
 - a Copilot Studio environment you can build in,
 - a SharePoint site with four Contoso IT policies,
 - a SharePoint list where employees log IT requests.
 
-Every lab after this one uses these ingredients, so take your time here.
+Every lab after this one builds on them, so take your time here.
 
 ## Estimated timing: 30 minutes
 
