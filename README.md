@@ -32,21 +32,31 @@ Total: about **8 hours**. Split it into two days, or run Labs 00-04 as a half-da
 
 ---
 
-## How the agents grow
+## How the agent grows: think of it as a robot
 
-```
-Lab 01-03  Agent Builder          "Contoso IT Helper"          instructions -> knowledge -> code interpreter, skills
-                                         |
-                                         | Copy to Copilot Studio
-                                         v
-Lab 04-06  Copilot Studio         "Contoso Service Desk"       knowledge -> connectors -> MCP -> workflow + approval
-                                         |
-Lab 07                                   +--> connected agent "Contoso License Advisor"
-                                         |
-Lab 08                            "Contoso Triage Agent"       trigger (new SharePoint item) -> skill -> update + notify
-                                         |
-Lab 09                            Evaluate -> Publish to Teams & M365 Copilot -> Admin approval -> Monitor
-```
+Across the ten labs you build **one robot**, piece by piece. Each lab adds a part and tests it.
+
+![The agent as a robot: each part is a Copilot Studio feature, with the lab where you add it](Instructions/Labs/media/robot-analogy.png)
+
+| Robot part | What it is in Copilot Studio | Lab |
+|---|---|---|
+| **Battery** | The environment and its **Copilot Credits**. No power, no robot | 00 |
+| **Head** | The **AI model**, the brain | 01 |
+| **Rulebook** | The **instructions**: who you are, what you do, what you never do | 01 |
+| **Eyes** | **Knowledge**: it reads the Contoso policies and cites them | 02 |
+| **Cartridges** | **Skills**: one precise procedure, loaded only when needed | 03, 07 |
+| **Black box** | The **activity trace**: every thought and every move, recorded | 04 |
+| **Hand** | **Tools** and connectors: it creates tickets and sends emails | 05 |
+| **Universal plug** | **MCP**: any service that speaks MCP plugs straight in | 05 |
+| **Rails** | **Workflows**: fixed steps, always in the same order | 06 |
+| **Key** | **Human approval**: a person decides, not the robot | 06 |
+| **Notebook** | **Memory**: it remembers each user's preferences | 07 |
+| **A colleague robot** | **Connected agents**: it asks the License Advisor instead of copying its knowledge | 07 |
+| **Alarm clock** | **Triggers**: it wakes up on its own when something happens | 08 |
+| **Cage** | **Guardrails**: fixed inputs, limited tools, a shared account with only the access it needs | 08 |
+| **Inspection** | **Evaluate, publish and govern** before it leaves the workshop | 09 |
+
+The agents you build along the way: **Contoso IT Helper** (Labs 01-03, Agent Builder) → **Contoso Service Desk** (Labs 04-07, Copilot Studio) with its colleague **Contoso License Advisor** (Lab 07) → **Contoso Triage Agent** (Lab 08) → evaluated, published and governed (Lab 09).
 
 ---
 
