@@ -302,15 +302,25 @@ The fastest way for a lab: **pay-as-you-go**, billed to an Azure subscription.
 
 Skip this task if you work alone.
 
-1. Open the **Contoso IT Hub** site. On **Home**, select **+ New** > **List**.
+1. Open the **Contoso IT Hub** site. On **Home**, select **+ New** > **List**, exactly like in Task 4.
 
-1. Under **Create from**, select **From existing list**.
+   ![New menu on the site home page with List highlighted](media/lab00-14-new-list-menu.png)
+
+1. This time, don't pick a blank list. Under **Import from**, select **Existing list**.
+
+   ![How would you like to start, with Existing list highlighted](media/lab00-26-existing-list.png)
+
+   Why not **List** under *Create from blank*? Because you'd have to rebuild the seven columns and all their choices by hand. **Existing list** copies the **columns, the choices and the default values**, but not the items. One click instead of seven columns, and no typos in the choice values.
 
 1. Pick the **Contoso IT Hub** site, select the **IT Requests** list, and select **Next**.
 
-   This copies the **columns, the choices and the default values**, not the items. One click instead of seven columns.
+1. Name it `IT Requests - XX` with **your initials** (for example `IT Requests - MD`). Keep **Show list in site navigation** checked and select **Create**. It's the same dialog you saw in Task 4, with a different name:
 
-1. Name it `IT Requests - XX` with **your initials** (for example `IT Requests - MD`). Keep **Show list in site navigation** checked and select **Create**.
+   ![The list name dialog](media/lab00-16-list-name.png)
+
+1. Check the result. Your new list has exactly the same columns as the trainer's **IT Requests** list, and it's empty:
+
+   ![The copied list with all the custom columns](media/lab00-19-it-requests-columns.png)
 
 1. Add one test item (**+ New**): Title `Docking station not detected`, Category **Hardware**. Check that **Priority** shows **Normal** and **Status** shows **New** without you touching them: the defaults came with the copy.
 
