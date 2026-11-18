@@ -31,7 +31,8 @@ These labs were written in **November 2026** against preview features of the Mic
 | 05 | MCP custom server dialog fields (Name / Description / Server URL / Authentication) |
 | 06 | Actions placed **after "Respond to the agent"** keep running - confirmed Nov 2026 (Activity tab shows the approval step, 1m40s, then the If branch). |
 | 06 | The **▷ Test** button is unavailable for agent-triggered workflows - test from the agent, debug in **Activity** / **Run node** |
-| 07 | Skill upload in Copilot Studio accepts the `.zip` package (otherwise upload `SKILL.md`) |
+| 07 | Skills **+** menu: Upload a skill / Create from blank / Browse skills (preview) - confirmed Nov 2026; `.zip` upload works |
+| 07 | Only agents built in the new experience can be connected; classic agents show *Classic agent connections are not supported* |
 | 07 | **Allow other agents to connect** (Settings > AI + behavior) is on by default - confirmed Nov 2026 |
 | 08 | Trigger list (SharePoint **When an item is created**, **Recurrence**), **Start listening** and **Activate for myself** flow |
 | 09 | Evaluate CSV template columns; channel name for Teams + Microsoft 365 Copilot |
@@ -53,6 +54,8 @@ These labs were written in **November 2026** against preview features of the Mic
 | Agent created a normal IT request with Status New, no approval | **Bypass**: workflow failed, orchestrator used Create IT request | Fix the workflow; add the "never use Create IT request for software" instruction + tool description. Great discussion point: instructions are not guardrails |
 | Learner picked a Nintex/Datablend "workflow" | Searched "workflow" in Add a tool | Use **Add > Workflow** |
 | Email reads "forMicrosoft Visiowas approved" | No spaces around the chip in Body | Add a space each side |
+| Closure skill not used, "no ticket found" | The agent checked Find my IT requests first and the ticket doesn't exist | Expected (grounded). Test with a real ticket number |
+| Memory test answers in English | Memory off, not saved, or same conversation | Save, then **New chat** |
 | Trigger fires in a loop | "Created **or modified**" trigger + agent updates the item | Use "When an item is created" |
 
 ## Discussion questions (use between labs)
