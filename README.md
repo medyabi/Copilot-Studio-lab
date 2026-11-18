@@ -102,10 +102,6 @@ Or download only the file you need:
 | [`Instructions/Trainer`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Instructions/Trainer) | Trainer notes: agendas, team setup, troubleshooting |
 | [`Allfiles/Labs`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Allfiles/Labs) | The lab files listed above, one folder per lab |
 
-## Publish as a lab website
-
-This repo uses the same layout as the Microsoft Learning lab sites (for example AZ-104). Turn on **GitHub Pages** (Settings > Pages > Deploy from branch > `main` / root) and the `index.md` page lists every lab automatically from the `lab:` front matter.
-
 ---
 
 *Author: Mohamed Dyabi - Microsoft Certified Trainer. Contoso is a fictitious company used for training.*
