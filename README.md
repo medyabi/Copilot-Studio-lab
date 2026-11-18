@@ -76,17 +76,31 @@ The agents you build along the way: **Contoso IT Helper** (Labs 01-03, Agent Bui
 
 ---
 
+## Lab files
+
+**Download everything at once:** [Copilot-Studio-lab-main.zip](https://github.com/medyabi/Copilot-Studio-lab/archive/refs/heads/main.zip). Extract it, then open the `Allfiles/Labs` folder.
+
+Or download only the file you need:
+
+| Lab | File | What it's for |
+|---|---|---|
+| 00 | [Contoso-Laptop-and-Device-Policy.docx](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/00/Contoso-Laptop-and-Device-Policy.docx) | Policy uploaded to the SharePoint **Documents** library |
+| 00 | [Contoso-Software-Request-Policy.docx](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/00/Contoso-Software-Request-Policy.docx) | Policy: software categories A to D (used again in Lab 06) |
+| 00 | [Contoso-Remote-Access-and-VPN-Guide.docx](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/00/Contoso-Remote-Access-and-VPN-Guide.docx) | Policy uploaded to the SharePoint **Documents** library |
+| 00 | [Contoso-Password-and-MFA-Policy.docx](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/00/Contoso-Password-and-MFA-Policy.docx) | Policy uploaded to the SharePoint **Documents** library |
+| 03 | [Contoso-IT-Tickets-Q3-2026.csv](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/03/Contoso-IT-Tickets-Q3-2026.csv) | 240 tickets to analyze with the code interpreter |
+| 03, 07, 08 | [it-ticket-triage.zip](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/03/it-ticket-triage.zip) | The triage **skill** package (upload the `.zip`). [View SKILL.md](https://github.com/medyabi/Copilot-Studio-lab/blob/main/Allfiles/Labs/03/it-ticket-triage/SKILL.md) |
+| 07 | [Contoso-License-Catalog.docx](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/07/Contoso-License-Catalog.docx) | Knowledge for the **Contoso License Advisor** |
+| 09 | [Contoso-ServiceDesk-TestSet.csv](https://github.com/medyabi/Copilot-Studio-lab/raw/main/Allfiles/Labs/09/Contoso-ServiceDesk-TestSet.csv) | Test set for **Evaluate** |
+
 ## Repository layout
 
-```
-Instructions/Labs/      the lab guides (one Markdown file per lab)
-Instructions/Labs/media screenshots (add yours here - see the 📸 markers in each lab)
-Allfiles/Labs/00        Contoso policy documents to upload to SharePoint
-Allfiles/Labs/03        ticket export (CSV) for the code interpreter exercise
-Allfiles/Labs/07        license catalog + the "it-ticket-triage" skill package
-Allfiles/Labs/09        evaluation test set (CSV)
-Instructions/Trainer    trainer notes, timings and troubleshooting
-```
+| Folder | What's inside |
+|---|---|
+| [`Instructions/Labs`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Instructions/Labs) | The lab guides, one Markdown file per lab |
+| [`Instructions/Labs/media`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Instructions/Labs/media) | The screenshots used in the labs |
+| [`Instructions/Trainer`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Instructions/Trainer) | Trainer notes: agendas, team setup, troubleshooting |
+| [`Allfiles/Labs`](https://github.com/medyabi/Copilot-Studio-lab/tree/main/Allfiles/Labs) | The lab files listed above, one folder per lab |
 
 ## Publish as a lab website
 
